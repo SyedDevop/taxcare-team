@@ -48,4 +48,4 @@ service-account-credentials.json
 yarn.lock
 /open-FC-VC.bat
 /bfg-1.14.0.jar
-/functions/0.0.0.0
+**/0.0.0.0
