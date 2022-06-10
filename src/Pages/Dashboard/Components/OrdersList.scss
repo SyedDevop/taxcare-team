@@ -1,0 +1,56 @@
+@import "../../../core-ui/Variables.scss";
+
+#orderList {
+  @media (min-width: $mobile) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    place-items: center;
+    // align-items: start;
+    // margin: 0;
+  }
+  .orders {
+    // & > * {
+    //   margin-bottom: 5px;
+    // }
+    & > * {
+      margin-bottom: 5px;
+    }
+    background-color: $light;
+    border-radius: 5px;
+    padding: clamp(0.5em, 1vw, 1.2em);
+    color: $black-dark;
+    align-self: start;
+    margin: 0.5em auto;
+    width: clamp(275px, 15vw, 350px);
+    h1,
+    h2,
+    h3 {
+      font-weight: $font-weight-regular;
+      font-size: 1rem;
+    }
+    hr {
+      height: 1px;
+      background-color: $black-light;
+    }
+    h2,
+    h1 {
+      color: $secondary;
+    }
+    .date,
+    .plan,
+    .addOn,
+    .discount,
+    .total {
+      display: flex;
+      justify-content: space-between;
+    }
+    .price {
+      text-align: right;
+    }
+  }
+}
+
+.dis-none {
+  display: none;
+}

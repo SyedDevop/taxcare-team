@@ -1,0 +1,32 @@
+@import "../../core-ui/Variables.scss";
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  --scale: 0.2, 0.2, 0.2;
+}
+.backdrop-enter,
+.backdrop-appear {
+  opacity: 0;
+  transform: scale3d(var(--scale));
+  border-radius: 50px;
+}
+.backdrop-enter-done,
+.backdrop-appear-done {
+  opacity: 1;
+  border-radius: 0px;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.backdrop-exit {
+  opacity: 1;
+}
+.backdrop-exit-active {
+  opacity: 0;
+  transform: scale3d(var(--scale));
+  transition: opacity 300ms, transform 300ms;
+}

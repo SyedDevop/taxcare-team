@@ -1,0 +1,95 @@
+@import "../../core-ui/Variables.scss";
+@import "./NavStyleMixin";
+
+#nav {
+  --nav-height: 75px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  max-height: var(--nav-height);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  .navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .menuBtn {
+      display: none;
+      background-color: transparent;
+      svg {
+        font-size: 2.5rem;
+        color: $secondary;
+      }
+      &:hover {
+        svg {
+          color: $primary;
+        }
+      }
+    }
+    @media (max-width: $desktop) {
+      @include mobileNavStyle;
+    }
+    @media (min-width: ($desktop - 1px)) {
+      @include desktopNavStyle;
+    }
+    .navLinks {
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: $black-dark;
+      }
+      svg {
+        font-size: clamp(0.8rem, 1vw, 1.2rem);
+        vertical-align: text-bottom;
+        transform: rotate(-90deg);
+        transition: all 300ms ease-in;
+      }
+      li {
+        &:hover,
+        &:active,
+        &:focus {
+          color: $primary;
+          cursor: pointer;
+          a,
+          p {
+            color: $primary;
+          }
+          svg {
+            transform: rotate(0deg);
+            transition: all 400ms ease-in;
+            font-size: 0.9rem;
+          }
+        }
+      }
+      #account {
+        svg {
+          font-size: 2rem;
+          transform: rotate(0deg);
+        }
+        .account__logo {
+          display: grid;
+          place-items: center;
+        }
+        position: relative;
+        ul {
+          left: -50%;
+        }
+      }
+    }
+    .logo {
+      a {
+        display: grid;
+        justify-content: center;
+        svg {
+          width: clamp(70%, 16vw, 100%);
+        }
+      }
+    }
+  }
+}

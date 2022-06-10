@@ -1,0 +1,57 @@
+@import "./routeTransition";
+@import "./Variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "sans-serif";
+  scroll-behavior: smooth;
+  transition: all 300ms linear;
+  // overflow-x: hidden;
+  &.modal-active {
+    overflow: hidden;
+  }
+}
+.App {
+  position: relative;
+  transition: all 300ms linear;
+}
+
+.container {
+  // width: clamp(360px, 90vw,1350px);
+  // margin: 0 auto;
+  // @media(max-width: $tablet) {
+  //   padding-inline: clamp(10px, 2vw, 30px);
+
+  // }
+  inline-size: #{"min(100% - 4rem, 80rem)"};
+  margin-inline: auto;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: $mobile) {
+  .container {
+    max-width: $mobile;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: $tablet) {
+}
+
+// Large devices (laptop, 992px and up)
+@media (max-width: $laptop) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: $desktop) {
+}
+@media (min-width: $desktop) and (max-width: 1350px) {
+  .container {
+    max-width: 1150px;
+  }
+}

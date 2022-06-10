@@ -1,0 +1,36 @@
+@import "../../core-ui/Variables.scss";
+@import "../../core-ui/Mixin.scss";
+#hero {
+  @include banners-style;
+  .content * {
+    margin-bottom: 30px;
+    font-weight: $font-weight-black;
+  }
+  .content {
+    .Typewriter {
+      color: $primary;
+      font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+      span:last-of-type {
+        font-size: 1.3rem;
+      }
+    }
+    h1 {
+      @include title-style;
+    }
+    h1,
+    h3,
+    p,
+    strong {
+      color: $black-light;
+    }
+    p {
+      span {
+        font-weight: $font-weight-regular;
+      }
+    }
+    p * {
+      margin: 0;
+    }
+    @include button-style;
+  }
+}

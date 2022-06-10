@@ -1,0 +1,120 @@
+@import "../../core-ui/Variables.scss";
+
+// clip-path: polygon(20px 0, 100% 0%, 100% 100%, 0% 100%);
+
+#statement {
+  width: 100%;
+  min-height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 200px 0;
+  position: relative;
+  background-attachment: fixed;
+  &::after {
+    content: "";
+    background-color: #2d9cdb;
+    mix-blend-mode: hue;
+    position: absolute;
+    inset: 0;
+  }
+  .statementStyle {
+    display: flex;
+    justify-content: space-between;
+    * {
+      color: $light;
+      font-weight: normal;
+      max-width: 500px;
+    }
+    // &::after,
+    // &::before {
+    //   content: "";
+    //   background-color: $primary-light;
+    //   height: 100px;
+    //   position: absolute;
+    //   @media (max-width: $tablet) {
+    //     content: none;
+    //   }
+    // }
+    // &::after {
+    //   bottom: -100px;
+    //   left: -5px;
+    //   right: 52.1%;
+    //   transform: skew(-8deg);
+    // }
+    // &::before {
+    //   top: -100px;
+    //   right: -5px;
+    //   left: 52.4%;
+    //   transform: skew(-8deg);
+    // }
+    @media (min-width: $tablet) {
+      &::after,
+      &::before {
+        content: "";
+        background-color: $primary-light;
+        height: 100px;
+        position: absolute;
+      }
+      &::after {
+        bottom: -100px;
+        left: -5px;
+        right: 52.1%;
+        transform: skew(-8deg);
+        // clip-path: polygon(0 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+      }
+      &::before {
+        top: -100px;
+        right: -5px;
+        left: 52.4%;
+        transform: skew(-8deg);
+        // clip-path: polygon(20px 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+    hr {
+      width: 5px;
+      background-color: white;
+      transform: skew(-8deg);
+      top: 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      @media (max-width: $desktop) {
+        display: none;
+      }
+    }
+    .missionStatement {
+      margin: 18% 0 10%;
+      position: relative;
+    }
+    .vision {
+      position: relative;
+      margin: 10% 0 18%;
+
+      text-align: end;
+    }
+    .missionStatement,
+    .vision {
+      h2 {
+        text-decoration: underline 3px;
+        margin-bottom: 20px;
+      }
+      p {
+        line-height: 1.5rem;
+      }
+    }
+  }
+  @media (max-width: $tablet) {
+    .statementStyle {
+      flex-direction: column;
+      span {
+        display: none;
+      }
+      * {
+        max-width: none;
+      }
+    }
+    height: auto;
+    background-attachment: scroll;
+    margin-bottom: 100px;
+  }
+}

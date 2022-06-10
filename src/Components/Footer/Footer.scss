@@ -1,0 +1,71 @@
+@import "../../core-ui/Variables.scss";
+footer {
+  background-color: black;
+  .footer {
+    display: flex;
+    padding-block: 50px;
+    justify-content: space-evenly;
+    color: $light;
+    @media (max-width: $desktop) {
+      .logo {
+        display: none;
+      }
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 2rem;
+      .logo {
+        display: flex;
+      }
+    }
+    .contact {
+      a {
+        text-decoration: none;
+        color: $light;
+      }
+      .links {
+        display: flex;
+        margin-bottom: 20px;
+      }
+      svg {
+        font-size: 2.5rem;
+      }
+    }
+    .address {
+      div {
+        display: flex;
+        svg {
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        max-width: 250px;
+      }
+    }
+    svg {
+      color: $primary;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .address,
+    .contact,
+    .socialLinks {
+      h3 {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .footerBar {
+    background-color: $black-dark;
+    height: 50px;
+    display: grid;
+    color: $light;
+    place-items: center;
+    .container {
+      width: fit-content;
+    }
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../core-ui/Variables.scss";
+
+.outbound-link {
+  margin-top: 0.5em;
+  color: $secondary;
+  a {
+    padding-left: 0.5em;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

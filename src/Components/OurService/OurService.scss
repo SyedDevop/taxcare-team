@@ -1,0 +1,119 @@
+@import "../../core-ui/Variables.scss";
+@import "../../core-ui/Mixin.scss";
+#OurService {
+  margin-top: 50px;
+  h1 {
+    @include title-style;
+  }
+  .btn {
+    color: $black-dark;
+    background-color: $primary-light;
+    margin-inline-end: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    font-weight: $font-weight-regular;
+    font-family: inherit;
+    transition: all 0.2s ease-in;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $light;
+      background-color: $primary;
+      cursor: pointer;
+      font-weight: $font-weight-black;
+      box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease-in;
+    }
+  }
+  .serviceBtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .active {
+    color: $light;
+    background-color: $primary;
+    cursor: default;
+  }
+  .gridTemplate {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    @media (max-width: $mobile) {
+      @include flex-center;
+      flex-direction: column;
+      justify-content: stretch;
+    }
+  }
+  .serviceCard {
+    margin-top: 50px;
+    .card {
+      padding: clamp(20px, 4vw, 45px);
+      background-color: $primary-light;
+      border-radius: 25px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+
+      svg {
+        width: clamp(3rem, 4vw, 4rem);
+      }
+
+      h1 {
+        font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+        font-weight: $font-weight-regular;
+        margin: 25px 0 0;
+      }
+      h4 {
+        color: $black-dark;
+        font-weight: $font-weight-bold;
+        margin-block-end: 15px;
+      }
+      p {
+        color: $black-light;
+        line-height: 1.2;
+        margin-block-end: 30px;
+      }
+      h4,
+      p {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+      }
+      a {
+        text-decoration: none;
+        color: $primary;
+      }
+      .corner {
+        height: 100px;
+        @media (max-width: $mobile) {
+          height: 80px;
+        }
+        width: 102%;
+        background-image: linear-gradient(-45deg, #44eaff 1%, $primary 100%);
+        position: absolute;
+        left: -3px;
+        bottom: -100px;
+        transform: rotate(0deg) skew(0deg);
+        * {
+          color: $light;
+        }
+        opacity: 0;
+        transition: all 0.3s linear;
+      }
+      .arrow {
+        transform: rotate(5.5deg) skew(5deg);
+        text-align: end;
+        margin-right: 50px;
+      }
+      &:hover {
+        border-color: $primary;
+        .corner {
+          opacity: 1;
+          bottom: -50px;
+          transform: rotate(-5deg) skew(-7deg);
+          transition: all 0.3s linear;
+        }
+      }
+    }
+  }
+}

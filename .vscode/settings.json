@@ -1,0 +1,27 @@
+{
+    "cSpell.words": [
+        "aadhar",
+        "Assessee",
+        "Dropzone",
+        "Esic",
+        "Firestore",
+        "fssai",
+        "fullsreen",
+        "GSTR",
+        "hookform",
+        "mandatorily",
+        "msme",
+        "Taxcare",
+        "toggler",
+        "udyog",
+        "uuidv",
+        "vars"
+    ],
+    "eslint.rules.customizations": [
+        {
+            "typescript-eslint": {
+                "react/jsx-props-no-spreading": "off",
+            }
+        }
+    ],
+}

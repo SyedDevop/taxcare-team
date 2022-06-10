@@ -1,0 +1,41 @@
+@import "../../core-ui/Variables.scss";
+
+.headerBar {
+  background-color: $black-dark;
+  width: 100%;
+  height: 50px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    a {
+      color: #bdbdbd;
+      text-decoration: none;
+      font-size: 1rem;
+      &:hover {
+        cursor: pointer;
+        color: $primary-blue;
+      }
+      svg {
+        font-size: 1.2rem;
+        vertical-align: bottom;
+        margin-inline: 5px;
+      }
+    }
+    span {
+      color: #bdbdbd;
+      font-size: 1.2rem;
+      padding-inline: 10px;
+    }
+    .pageLink {
+      a {
+        padding-inline: 10px;
+        font-size: 1rem;
+      }
+    }
+  }
+  @media (max-width: 880px) {
+    display: none;
+  }
+}

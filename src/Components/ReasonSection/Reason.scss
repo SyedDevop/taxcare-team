@@ -1,0 +1,61 @@
+@import "../../core-ui/Variables.scss";
+@import "../../core-ui/Mixin.scss";
+#reason {
+  margin-block-start: 100px;
+  background-color: $primary-light;
+  padding-block: 50px 100px;
+  transition: all 0.2s ease-in;
+  h1 {
+    @include title-style;
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+  .gridTemplate {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    gap: 1rem;
+    @media (max-width: $mobile) {
+      @include flex-center;
+      flex-direction: column;
+    }
+  }
+  .reasonCards {
+    background-color: $light;
+    border-radius: 10px;
+    padding: clamp(10px, 4vw, 35px);
+    max-width: fit-content;
+    transition: all 0.2s ease-in;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    border: 1px solid $primary;
+    overflow: hidden;
+    svg {
+      width: 2rem;
+    }
+    h4 {
+      color: $black-dark;
+      font-weight: $font-weight-bold;
+      margin-block-end: 15px;
+    }
+    p {
+      color: $black-light;
+      line-height: 1.2;
+      max-width: 400px;
+    }
+    &:hover,
+    :focus {
+      transition: all 0.2s ease-out;
+      box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+      background-image: linear-gradient(-45deg, #44eaff 10%, $primary 100%);
+      cursor: default;
+      overflow: hidden;
+      * {
+        color: $light;
+        fill: $light;
+      }
+    }
+  }
+}

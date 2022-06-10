@@ -1,0 +1,74 @@
+@import "../../../../core-ui/Variables.scss";
+
+#uploadDoc {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .dropZone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    row-gap: 1rem;
+    border-radius: 2rem;
+    width: clamp(350px, 27vw, 550px);
+    height: clamp(150px, 10vh, 200px);
+    border: 2px dashed $primary-blue;
+    transition: all 0.2s linear;
+
+    label {
+      background-color: $primary-blue;
+      border-radius: 5px;
+      padding: 10px 25px;
+    }
+    input[type="file"] {
+      display: none;
+    }
+  }
+  .dropZoneActive {
+    border: 2px solid $primary-blue;
+    transition: all 0.2s linear;
+  }
+  .filesList {
+    list-style-type: none;
+    li {
+      width: 100%;
+      font-size: 1.25rem;
+      background-color: $black-dark;
+      border-radius: 10px;
+      color: $light;
+      padding: 10px;
+      margin: 1rem 0;
+    }
+  }
+
+  .progressBar {
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    background-color: $black-light;
+    transition: all 200ms linear;
+    margin-top: 10px;
+    .progressFill {
+      width: 0;
+      height: 100%;
+      border-radius: 20px;
+      background-color: $primary-blue;
+      transition: all 200ms linear;
+    }
+  }
+
+  #uploadBtn {
+    width: 100%;
+    color: $primary-blue;
+    border: 2px solid $primary-blue;
+    background: transparent;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    margin-top: 1.5em;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../core-ui/Variables.scss";
+@import "../../core-ui/FormStyle.scss";
+
+#login {
+  display: grid;
+  place-items: center;
+  form {
+    @include FormStyle();
+    position: relative;
+    #close {
+      position: absolute;
+      right: 30px;
+      top: 25px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    input {
+      @include InputStyle();
+    }
+    button {
+      @include ButtonStyle();
+    }
+    .loadState {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      padding: 0;
+      border: 0;
+    }
+  }
+}

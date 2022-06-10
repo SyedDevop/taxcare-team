@@ -1,0 +1,28 @@
+@import "../../core-ui/Variables.scss";
+@import "../../core-ui/Mixin.scss";
+#scrollBox {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  @include flex-center;
+  flex-direction: column;
+  z-index: 500;
+  border-radius: 10px;
+  background-color: $secondary;
+  color: $primary-blue;
+  border: 2px solid transparent;
+  transition: all 200ms ease;
+  transform: rotate(-90deg);
+  svg {
+    font-size: 2.3rem;
+  }
+  &:focus,&:hover {
+    background-color: $light;
+    color: $secondary;
+    border: 2px solid $secondary;
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease;
+  }
+}

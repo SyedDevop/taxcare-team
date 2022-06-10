@@ -1,0 +1,27 @@
+@import "../../../../core-ui/Variables.scss";
+@import "../../../../core-ui/FormStyle.scss";
+
+#setting {
+  .resetPassword {
+    display: grid;
+    place-items: center;
+  }
+  form {
+    @include FormStyle();
+
+    input {
+      @include InputStyle();
+    }
+    button {
+      @include ButtonStyle();
+    }
+    h3 {
+      margin-bottom: 15px;
+      font-weight: $font-weight-regular;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../core-ui/Variables.scss";
+@import "../../core-ui/Mixin.scss";
+#procedure {
+  max-width: 450px;
+  padding: 10px;
+  h1 {
+    @include title-style;
+    margin-bottom: 0;
+  }
+  hr {
+    border: 5px solid $primary;
+    background-color: $primary;
+    border-radius: 5px;
+    width: 18%;
+  }
+  ul {
+    line-height: 1.5rem;
+    padding: 20px;
+  }
+  li {
+    margin: 15px 0;
+    &::marker {
+      color: $primary;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    span {
+      color: red;
+    }
+  }
+}

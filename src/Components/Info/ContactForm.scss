@@ -1,0 +1,96 @@
+@import "../../core-ui/Variables.scss";
+@import "../../core-ui/Mixin.scss";
+#contactForm {
+  max-width: 550px;
+  h1 {
+    @include title-style;
+    margin-block-end: 10px;
+  }
+  padding: 10px;
+  form {
+    .column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+      margin-top: 25px;
+      gap: 1rem;
+      * > {
+        grid-column: span 1;
+      }
+      @media (min-width: $mobile) {
+        .messageDiv {
+          grid-column: span 2;
+        }
+      }
+    }
+    input,
+    textarea {
+      background-color: #e5e5e5;
+      border-radius: 10px;
+      border: 2px solid $primary;
+      color: $black-dark;
+      font-family: "Roboto", "sans-serif";
+      font-size: 1.2rem;
+      padding: 10px;
+      position: relative;
+      width: 100%;
+      &::placeholder {
+        color: transparent;
+      }
+      &:active ~ label,
+      &:focus ~ label,
+      &:valid ~ label,
+      &:not(:placeholder-shown) ~ label {
+        background-color: $light;
+        top: -10.1px;
+        padding: 0px 10px;
+        border: 1px solid $primary;
+        border-radius: 10px;
+      }
+      &:active,
+      &:focus,
+      &:not(:placeholder-shown) {
+        outline: none;
+        border: 2px solid $primary;
+        -webkit-box-shadow: 0px 0px 5px $primary;
+        box-shadow: 0px 0px 5px $primary;
+      }
+    }
+
+    .nameDiv,
+    .emailDiv,
+    .subjectDiv,
+    .phoneDiv,
+    .messageDiv {
+      position: relative;
+      grid-column: span 1;
+    }
+    label {
+      color: $primary;
+      position: absolute;
+      top: 11.1px;
+      left: 15px;
+      transition: 0.2s;
+    }
+    button {
+      margin: 20px 0;
+      color: $black-dark;
+      background-color: $primary-light;
+      margin-inline-end: 10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: $font-weight-regular;
+      font-family: inherit;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        color: $light;
+        background-color: $primary;
+        cursor: pointer;
+        font-weight: $font-weight-black;
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease-in;
+      }
+    }
+  }
+}

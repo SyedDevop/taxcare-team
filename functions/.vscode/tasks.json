@@ -1,0 +1,49 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "serve:emu",
+			"problemMatcher": [],
+			"label": "start firebase emulators with data persistent",
+			"detail": "firebase emulators:start --import ./firebase-data --export-on-exit"
+		},
+		{
+			"type": "npm",
+			"script": "serve:host",
+			"problemMatcher": [],
+			"label": "ster firebase emulaters and local devices",
+			"detail": "npm run serve:emu --host 0.0.0.0"
+		},
+		{
+			"type": "npm",
+			"script": "build:fix",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Build the project with linting",
+			"detail": "npm run build:fix"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Build the project",
+			"detail": "npm run build"
+		},
+		{
+			"type": "npm",
+			"script": "deploy",
+			"problemMatcher": [],
+			"label": "deploy noly firebase functions to the cloud",
+			"detail": "firebase deploy --only functions"
+		},
+		{
+			"type": "npm",
+			"script": "lint:fix",
+			"problemMatcher": [],
+			"label": "npm: lint:fix",
+			"detail": "npm run lint -- --fix"
+		}
+	]
+}

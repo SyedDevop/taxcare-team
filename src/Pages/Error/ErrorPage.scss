@@ -1,0 +1,82 @@
+@import "../../core-ui/Variables.scss";
+
+#errorPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: $secondary;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $light;
+  svg {
+    height: 100vh;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    @media (max-width: $mobile) {
+      height: 75vh;
+      width: 130vw;
+      padding-left: 25px;
+    }
+  }
+  & > div {
+    padding-inline: 25px;
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      position: relative;
+      margin-bottom: 1rem;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        min-width: 60px;
+        min-height: 2px;
+        background-color: $primary-blue;
+      }
+    }
+    button {
+      padding-inline: clamp(0.6rem, 1vw, 1.5rem);
+      padding-block: clamp(0.4rem, 0.6vw, 0.7rem);
+      font-size: 1.2rem;
+      border-radius: 10px;
+      background-color: $primary-blue;
+      color: $light;
+      transition: all 200ms ease-in;
+      &:hover {
+        cursor: pointer;
+        background-color: $light;
+        color: $primary-blue;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px 7px;
+        transition: all 200ms ease-in;
+      }
+    }
+    transition: all 200ms ease-in;
+    // for only mobile
+    @media (max-width: $mobile) {
+      margin-top: 40vh;
+    }
+    // for desktop
+    @media (min-width: $mobile) {
+      position: relative;
+      padding-left: clamp(3em, 20vw, 28em);
+      h1 {
+        font-size: clamp(2rem, 3vw, 4rem);
+      }
+      p {
+        width: 60ch;
+        &:before {
+          top: -10px;
+          min-width: 100px;
+          min-height: 5px;
+        }
+      }
+    }
+  }
+}

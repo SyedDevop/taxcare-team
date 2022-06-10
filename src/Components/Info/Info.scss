@@ -1,0 +1,9 @@
+@import "../../core-ui/Variables.scss";
+#info {
+  margin-block: 100px;
+  .infoGroup {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  }
+}

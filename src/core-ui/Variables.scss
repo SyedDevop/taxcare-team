@@ -1,0 +1,26 @@
+$black-dark: #333333;
+$black-light: #4f4f4f;
+$light: #ffffff;
+$primary: #2d9cdb;
+$primary-dark: #8bc8ec;
+$primary-light: #cae6f6;
+$secondary: #091f2c;
+$primary-blue: #44eaff;
+// ----------------------------------------------------------------
+// Font
+$title-size: 2.6rem;
+$sub-title-size: 2.25rem;
+$mobile-title-size:1.6rem;
+$mobile-sub-title-size:1.25rem;
+$font-weight-black: 900;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+// ----------------------------------------------------------------
+// ViewPort
+$desktop:1200px;
+$laptop:992px;
+$tablet:770px;
+$mobile:576px;
+// Clamp 
+$clampPadding-20-50:clamp(20px, 6vw, 45px);
+

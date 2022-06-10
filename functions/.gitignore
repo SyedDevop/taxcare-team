@@ -1,0 +1,17 @@
+# Compiled JavaScript files
+lib/**/*.js
+lib/**/*.js.map
+
+# TypeScript v1 declaration files
+typings/
+
+# Node.js dependency directory
+node_modules/
+
+# tax-care-team-3a06395b4a37.json/
+firebase-data/
+/.runtimeconfig.json
+/firestore-debug.log
+/firebase-export-*
+/ui-debug.log
+

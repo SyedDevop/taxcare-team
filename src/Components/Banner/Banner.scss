@@ -1,0 +1,36 @@
+@import "../../core-ui/Mixin.scss";
+@import "../../core-ui/Variables.scss";
+#banner {
+  @include banners-style;
+  .bannerContent {
+    h1 {
+      @include title-style;
+    }
+    h3 {
+      color: $black-dark;
+      font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    }
+    .price {
+      color: $secondary;
+      margin-block-end: 35px;
+    }
+    h2 {
+      color: $primary;
+      font-size: clamp(1.25rem, 2.5vw, 2.25rem);
+    }
+    p {
+      color: $black-dark;
+      font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+    * {
+      margin-block-end: 10px;
+    }
+    // @media (max-width: $mobile) {
+    //   .price,
+    //   h2 {
+    //     font-size: $mobile-sub-title-size;
+    //   }
+    // }
+  }
+  @include button-style;
+}

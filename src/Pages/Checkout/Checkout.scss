@@ -1,0 +1,268 @@
+@import "../../core-ui/Variables.scss";
+
+#checkout {
+  --checkout-bc-color: #848f96;
+  --brief-overlap: 50px;
+  --space-between: 0.8em;
+  --color-red: rgba(227, 0, 79, 1);
+  background-color: var(--checkout-bc-color);
+  width: 100vw;
+  min-height: min-content;
+  display: grid;
+  place-items: center;
+  outline: none;
+  padding: calc(var(--brief-overlap) * 2) 0;
+
+  .noOrders {
+    width: inherit;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    h1 {
+      color: $light;
+    }
+  }
+
+  .checkoutSummary {
+    * {
+      font-weight: 400 !important;
+    }
+    @media (min-width: $laptop) {
+      display: grid;
+      align-items: center;
+      grid-template-areas:
+        "section-top section-top section-top"
+        "section-brief section-brief section-order"
+        "section-bottom section-bottom section-bottom";
+    }
+    // Globe style
+    hr {
+      height: 2px;
+      width: 100%;
+      background-color: $black-light;
+      margin-block: var(--space-between);
+    }
+    .listing {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: calc(var(--space-between) * 0.8);
+    }
+    h2 {
+      margin-bottom: var(--space-between);
+    }
+    .placeOrderBtn {
+      margin-top: var(--space-between);
+      font-size: 1.25rem;
+      width: 100%;
+      min-height: 70px;
+      border: 2px solid $primary-blue;
+      color: $primary-blue;
+      background-color: $light;
+      display: grid;
+      place-items: center;
+      transition: all 200ms linear;
+      &:not(:disabled) {
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          border-color: $secondary;
+          color: $secondary;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          transition: all 200ms linear;
+        }
+      }
+      &:disabled {
+        filter: grayscale(100%);
+        cursor: not-allowed;
+      }
+    }
+    // local
+    .checkoutBrief {
+      color: $light;
+      padding: 1.5em calc(var(--brief-overlap) + 10px);
+      background-color: $secondary;
+      @media (max-width: ($laptop - 10px)) {
+        margin: 0 auto;
+        max-width: 600px;
+      }
+      @media (min-width: $laptop) {
+        grid-area: section-brief;
+        margin-right: calc(-1 * var(--brief-overlap));
+        z-index: 2;
+      }
+      hr {
+        background-color: $primary-blue;
+      }
+    }
+    .checkoutOrder {
+      --padding-30: 1.5em;
+      background-color: $light;
+      color: $black-light;
+      padding: var(--padding-30);
+      max-width: 500px;
+      position: relative;
+      @media (max-width: ($laptop - 10px)) {
+        margin: 0 auto;
+      }
+      @media (min-width: $laptop) {
+        // grid-row: section-top / section-bottom;
+        grid-area: section-order;
+        padding-top: var(--padding-30);
+        padding-right: var(--padding-30);
+        padding-bottom: 3.5em;
+        padding-left: calc(var(--brief-overlap) + var(--padding-30));
+      }
+      * {
+        outline: none;
+      }
+      .discountSection {
+        #error-popup {
+          background-color: #53161f;
+          color: $light;
+          width: 100%;
+          display: block;
+          margin-block: 0.6em;
+          border-radius: 10px;
+        }
+        .discountInput {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          input {
+            margin-right: var(--space-between);
+            min-height: 50px;
+            background-color: rgba(51, 51, 51, 0.65);
+            padding: 10px;
+            border-radius: 10px;
+            width: 70%;
+            color: $light;
+            font-size: 1rem;
+            font-family: "Roboto", "sans-serif";
+            &:focus {
+              outline: 2px solid $secondary;
+              outline-offset: 0.2em;
+            }
+          }
+          button {
+            min-height: 50px;
+            background-color: $light;
+            color: $primary-blue;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: 2px solid $primary-blue;
+            width: 30%;
+            display: grid;
+            place-items: center;
+            &:hover,
+            &:focus {
+              cursor: pointer;
+              border-color: $secondary;
+              color: $secondary;
+              box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+              transition: all 200ms linear;
+            }
+          }
+        }
+      }
+      .priceSection {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: var(--space-between);
+      }
+      h1 {
+        color: $secondary;
+        font-size: 3rem;
+      }
+      h2 {
+        color: $black-dark;
+      }
+      h3 {
+        color: $black-light;
+      }
+      .submit > h3 {
+        color: $secondary;
+      }
+      .discount > h3 {
+        color: var(--color-red);
+      }
+      .hide{
+        visibility: hidden;
+      }
+      .total > h3 {
+        color: rgba(33, 150, 83, 1);
+      }
+      &::after {
+        background-color: #848f96;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1rem;
+        background-image: linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 50%
+          ),
+          linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 50%
+          );
+        background-size: 1rem 1rem;
+        background-repeat: repeat-x;
+        transform: rotate(180deg);
+      }
+    }
+    .userQuery {
+      p {
+        margin-bottom: var(--space-between);
+        a {
+          color: $primary-blue;
+          &:focus {
+            outline: 2px solid $primary-blue;
+            outline-offset: 0.2em;
+          }
+        }
+      }
+      .welcomeNote {
+        max-width: 60ch;
+      }
+      .note {
+        font-size: 0.9rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        max-width: 350px;
+        gap: var(--space-between);
+        margin-bottom: var(--space-between);
+        input {
+          min-height: 50px;
+          background-color: rgba(51, 51, 51, 0.65);
+          padding: 10px;
+          border-radius: 5px;
+          color: $light;
+          font-size: 1rem;
+          border-bottom: 5px solid rgba(51, 51, 51, 0.65);
+          &:focus,
+          &:not(:placeholder-shown) {
+            border-color: var(--color-red);
+            outline: none;
+          }
+        }
+        > input[type="text"],
+        > input[type="email"],
+        > input[type="tel"] {
+          &:not(:placeholder-shown) {
+            &:valid {
+              border-color: green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
