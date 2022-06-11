@@ -26,12 +26,12 @@ export const OnNewOrder = functions.firestore
           name: "Taxcare Team",
           email: "admin@taxcareteam.com",
         },
-        subject: "New Order",
         templateId: "d-d69e3a067b8a4412b73936965377d74b",
         dynamic_template_data: {
+          subject: "New Order",
           orderId: orderData.orderId,
           name: orderData.clientData.name,
-          orderSummery: {
+          orderSummary: {
             plan: [orderData.orderDetails],
             addons: orderData.orderDetails.addOnRecord,
             discount: orderData.discountPrice,
@@ -40,6 +40,7 @@ export const OnNewOrder = functions.firestore
           },
         },
       };
+      console.log(msg.dynamic_template_data);
       // return sgMail.send(msg);
       return sendGridSendEmail(msg);
     });
@@ -59,3 +60,26 @@ function sendGridSendEmail(msg:sgMail.MailDataRequired) {
   });
 }
 
+/**
+* Template for the email.
+* {
+    "subject":"New Order",
+    "orderSummary":{
+        "plan":[{
+            "planType":"Accounting",
+            "price":"7500",
+            "planId":"Plan(Pro)"
+            }],
+        "addons":[{
+            "addOnPlanId":"Caplitel gain",
+            "addOnPrice":600
+            },{
+            "addOnPlanId":"Caplitel gain",
+            "addOnPrice":600
+            }],
+        "subtotal":"8600",
+        "discount":1000,
+        "total":7600
+        }
+}
+*/
