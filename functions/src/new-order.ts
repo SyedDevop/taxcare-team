@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import {sendGridSendEmail} from "./sendGrid/conformation-and-signup";
 
 // export const addAdminClaims = functions.https.onCall(async (data, _) => {
 //   const customClaims = {admin: true, accessLevel: 9};
@@ -22,5 +23,6 @@ export const newOrder = functions.firestore
         issuedDate: admin.firestore.FieldValue.serverTimestamp(),
       };
       const notification = admin.firestore().collection("notification");
+      sendGridSendEmail(orderData);
       return notification.add(data);
     });
