@@ -1,7 +1,8 @@
 {
     "cSpell.words": [
         "firestore",
-        "sendgrid"
+        "sendgrid",
+        "Taxcare"
     ],
     "typescript.tsdk": "node_modules\\typescript\\lib",
     "workbench.colorCustomizations": {

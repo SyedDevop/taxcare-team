@@ -8,7 +8,6 @@ export interface UserOrderData {
   discountPrice: number;
   orderStates: {
     state: string;
-    payment: string;
   };
   totalAmount: number;
   issuedDate?: Timestamp;

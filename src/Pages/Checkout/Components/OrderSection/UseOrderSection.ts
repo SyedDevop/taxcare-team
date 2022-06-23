@@ -32,7 +32,8 @@ export const useOrderSection = ({
 
   const allAddOnPrice =
     addOnRecord?.reduce((total, recode) => total + recode.addOnPrice, 0) || 0;
-
+  // FIXME(1): Merge ExistingUserOrder and NewUserOrder functions and types. 
+  // FIXME(2): Delete the Payment method in user dashboard
   // -------------------------------------------------------------------------------
   // * HANDLE FORM SUBMIT *
   // -------------------------------------------------------------------------------
@@ -57,7 +58,6 @@ export const useOrderSection = ({
         discountPrice: discountAmount,
         orderStates: {
           state: "conformation",
-          payment: "conformation",
         },
         clientType: "existing",
         totalAmount: price + allAddOnPrice - discountAmount,
@@ -108,7 +108,6 @@ export const useOrderSection = ({
           discountPrice: discountAmount,
           orderStates: {
             state: "conformation",
-            payment: "conformation",
           },
           clientType: "new",
           totalAmount: price + allAddOnPrice - discountAmount,

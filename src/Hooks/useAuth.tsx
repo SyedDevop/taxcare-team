@@ -21,7 +21,6 @@ import {
 } from "firebase/auth";
 import { isDev } from "../Utils";
 
-
 export const app = initializeApp({
   apiKey: process.env.REACT_APP_FB_API,
   authDomain: process.env.REACT_APP_FB_DOMAIN,
@@ -56,9 +55,7 @@ export const AuthProvider: FC = ({ children }) => {
   const [isAuthenticating, setIsAuthenticating] = useState<boolean>(true);
   const auth = getAuth();
 
-  if (!isDev()) {
-    connectAuthEmulator(auth, "http://localhost:9099");
-  }
+  connectAuthEmulator(auth, "http://localhost:9099");
 
   /**
    * @type {Function} - Create a new user with email and password.

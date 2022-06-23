@@ -13,7 +13,6 @@ export const useFetchSignUp = () => {
   const history = useHistory();
   useEffect(() => {
     const fetchSignUp = async () => {
-      // apiKey="D39C02FA2-gwewxwHLl6h3PmcpxzpG-W6y6xW61CeTeukvjAaY3"
       const sleep = (ti: number) => {
         return new Promise((resolve) => setTimeout(resolve, ti));
       };
