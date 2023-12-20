@@ -19,9 +19,8 @@ const Opc = () => {
         <BannerContent
           title={name}
           tagLine1="Register your business with"
-          price="Starting @ just Rs 4499/-"
+          price="Starting @ just Rs 6499/-"
           tagLine2="Registration in India"
-          paragraph="Includes all the Government Fees* | DSC fees | GST Charges as applicable."
         />
       </Banner>
 

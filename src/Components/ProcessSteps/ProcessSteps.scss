@@ -16,10 +16,12 @@
   .stepsCard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 4rem;
     padding: 50px 0 100px;
     .cards {
       @include flex-center;
+      margin-inline: auto;
       justify-content: flex-start;
       flex-direction: column;
       font-weight: $font-weight-bold;

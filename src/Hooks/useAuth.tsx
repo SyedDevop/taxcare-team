@@ -53,9 +53,15 @@ export const useAuth = () => {
 export const AuthProvider: FC = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isAuthenticating, setIsAuthenticating] = useState<boolean>(true);
-  const auth = getAuth();
+  const auth = getAuth(app);
+  // connectAuthEmulator(auth, "http://localhost:9099", {
+  //   disableWarnings: true,
+  // });
 
-  connectAuthEmulator(auth, "http://localhost:9099");
+  // try {
+  // } catch (error: any) {
+  //   console.log("firebase auth error: ", error.message);
+  // }
 
   /**
    * @type {Function} - Create a new user with email and password.
@@ -132,7 +138,9 @@ export const AuthProvider: FC = ({ children }) => {
       setIsAuthenticating(false);
     });
     // Cleanup subscription on unmount
-    return unsubscribe();
+    return () => {
+      unsubscribe();
+    };
   }, [auth]);
 
   const values = {

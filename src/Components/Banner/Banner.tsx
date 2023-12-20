@@ -25,7 +25,7 @@ interface BannerContentProps {
   tagLine1: string;
   tagLine2: string;
   price: string;
-  paragraph: string;
+  paragraph?: string;
 }
 export const BannerContent = (props: BannerContentProps) => {
   return (

@@ -26,7 +26,7 @@ export const LlpData = [
         plan: [
           {
             planId: "basic",
-            price: 5499,
+            price: 6499,
             perPlanPerks: [
               "DSC of 2 Partners",
               "Authorised Share capital",
@@ -41,7 +41,7 @@ export const LlpData = [
           },
           {
             planId: "pro",
-            price: 7999,
+            price: 9999,
             perPlanPerks: [
               "DSC of 2 Partners",
               "Authorised Share capital",

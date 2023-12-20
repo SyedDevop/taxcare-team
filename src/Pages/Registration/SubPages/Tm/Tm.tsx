@@ -20,7 +20,6 @@ const Tm = () => {
           tagLine1="Register your business with"
           price="Starting @ just Rs 1699/-"
           tagLine2="Registration in India"
-          paragraph="Excludes Government Fees*"
         />
       </Banner>
 

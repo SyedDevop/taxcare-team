@@ -20,7 +20,6 @@ const Gst = () => {
           tagLine1="Register your business with"
           price="Starting @ just Rs 499/-"
           tagLine2="Registration in India"
-          paragraph="Includes all the Government Fees* | DSC fees | GST Charges as applicable."
         />
       </Banner>
 

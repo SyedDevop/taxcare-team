@@ -19,7 +19,6 @@ const ProjectReport = () => {
           tagLine1="Register your business with"
           price="Starting @ just Rs 7599/-"
           tagLine2="Registration in India"
-          paragraph="Includes all the Government Fees* | DSC fees | GST Charges as applicable."
         />
       </Banner>
       <PricingSection companyType="Project Report">

@@ -26,7 +26,7 @@ export const OpcData = [
         plan: [
           {
             planId: "basic",
-            price: 5499,
+            price: 6499,
             perPlanPerks: [
               "DIN & DSC of 1 Directors",
               "Authorised Share capital",
@@ -40,7 +40,7 @@ export const OpcData = [
           },
           {
             planId: "pro",
-            price: 9499,
+            price: 13499,
             perPlanPerks: [
               "DIN & DSC of 2 Directors",
               "Authorised Share capital",

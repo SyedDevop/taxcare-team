@@ -27,7 +27,7 @@ export const PlcData = [
         plan: [
           {
             planId: "basic",
-            price: 5999,
+            price: 7999,
             perPlanPerks: [
               "DIN & DSC of 2 Directors",
               "Authorised Share capital",
@@ -41,7 +41,7 @@ export const PlcData = [
           },
           {
             planId: "pro",
-            price: 9999,
+            price: 14999,
             perPlanPerks: [
               "DIN & DSC of 2 Directors",
               "Authorised Share capital",

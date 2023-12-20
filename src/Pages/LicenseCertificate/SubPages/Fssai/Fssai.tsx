@@ -21,7 +21,6 @@ const Fssai = () => {
           tagLine1="Register your business with"
           price="Starting @ just Rs 1399/-"
           tagLine2="Registration in India"
-          paragraph="Excluding the Government Fees*"
         />
       </Banner>
       <ProcessSteps processName={name} cardData={registrationProcess} />

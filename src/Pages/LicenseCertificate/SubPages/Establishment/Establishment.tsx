@@ -22,7 +22,6 @@ const Establishment = () => {
           tagLine1="Get Karnataka labour license"
           price="Starting @ just Rs 1999/-"
           tagLine2="Registration in India"
-          paragraph="Excludes all the Government Fees*"
         />
       </Banner>
       <ProcessSteps processName={name} cardData={registrationProcess} />

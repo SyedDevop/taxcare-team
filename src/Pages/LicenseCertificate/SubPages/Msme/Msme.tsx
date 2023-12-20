@@ -20,7 +20,6 @@ const Msme = () => {
           tagLine1="Get your udyog aadhar certificate"
           price="Starting @ just Rs 499/-"
           tagLine2="Registration in India"
-          paragraph="Includes all the Government Fees* | DSC fees | GST Charges as applicable."
         />
       </Banner>
       <ProcessSteps processName={name} cardData={registrationProcess} />
