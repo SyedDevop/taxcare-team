@@ -15,8 +15,11 @@
   transform: rotate(-90deg);
   svg {
     font-size: 2.3rem;
+    height: 1em;
+    width: 1em;
   }
-  &:focus,&:hover {
+  &:focus,
+  &:hover {
     background-color: $light;
     color: $secondary;
     border: 2px solid $secondary;

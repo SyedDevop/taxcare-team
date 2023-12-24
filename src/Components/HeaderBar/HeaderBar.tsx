@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import "./HeaderBar.scss";
 import { Link as ScrollLink } from "react-scroll";
 
-import PhoneIcon from "../../Asset/svg/icons/phone.svg?react";
-import TwitterIcon from "../../Asset/svg/icons/twitter.svg?react";
-import FacebookIcon from "../../Asset/svg/icons/fb.svg?react";
-import InstagramIcon from "../../Asset/svg/icons/instagram.svg?react";
-import EmailIcon from "../../Asset/svg/icons/contact_mail.svg?react";
+import PhoneIcon from "@svg/phone.svg?react";
+import TwitterIcon from "@svg/twitter.svg?react";
+import FacebookIcon from "@svg/fb.svg?react";
+import InstagramIcon from "@svg/instagram.svg?react";
+import EmailIcon from "@svg/contact_mail.svg?react";
 
 const HeaderBar = () => {
   return (

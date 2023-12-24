@@ -26,7 +26,7 @@ export const OpcData = [
         plan: [
           {
             planId: "basic",
-            price: 6499,
+            price: 8499,
             perPlanPerks: [
               "DIN & DSC of 1 Directors",
               "Authorised Share capital",
@@ -40,7 +40,7 @@ export const OpcData = [
           },
           {
             planId: "pro",
-            price: 13499,
+            price: 17999,
             perPlanPerks: [
               "DIN & DSC of 2 Directors",
               "Authorised Share capital",
@@ -49,8 +49,6 @@ export const OpcData = [
               "MOA & AOA",
               "PAN & TAN Card ",
               "Incorporation Certificate",
-              "1 Month Accounting",
-              "1 Month GST filing",
               "GST Registration",
               "MSME Registration",
               "Board Resolution 1 year",

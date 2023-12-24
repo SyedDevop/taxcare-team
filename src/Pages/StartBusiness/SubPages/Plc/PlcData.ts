@@ -1,4 +1,3 @@
-import { PlcDataType } from "../../StartBusiness.type";
 export const PlcData = [
   {
     registrationProcess: [
@@ -27,7 +26,7 @@ export const PlcData = [
         plan: [
           {
             planId: "basic",
-            price: 7999,
+            price: 9999,
             perPlanPerks: [
               "DIN & DSC of 2 Directors",
               "Authorised Share capital",
@@ -41,7 +40,7 @@ export const PlcData = [
           },
           {
             planId: "pro",
-            price: 14999,
+            price: 17999,
             perPlanPerks: [
               "DIN & DSC of 2 Directors",
               "Authorised Share capital",
@@ -50,8 +49,7 @@ export const PlcData = [
               "MOA & AOA",
               "PAN & TAN Card ",
               "Incorporation Certificate",
-              "1 Month Accounting",
-              "1 Month GST filing",
+              "INC-22A",
               "GST Registration",
               "MSME Registration",
               "Board Resolution 1 year",

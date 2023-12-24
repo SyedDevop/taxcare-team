@@ -26,7 +26,7 @@ export const LlpData = [
         plan: [
           {
             planId: "basic",
-            price: 6499,
+            price: 8499,
             perPlanPerks: [
               "DSC of 2 Partners",
               "Authorised Share capital",
@@ -41,7 +41,7 @@ export const LlpData = [
           },
           {
             planId: "pro",
-            price: 9999,
+            price: 12999,
             perPlanPerks: [
               "DSC of 2 Partners",
               "Authorised Share capital",
@@ -51,8 +51,6 @@ export const LlpData = [
               "MOA & AOA",
               "PAN & TAN Card ",
               "Incorporation Certificate",
-              "1 Month Accounting",
-              "1 Month GST filing",
               "GST Registration",
               "MSME Registration",
               "Board Resolution 1 year",

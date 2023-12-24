@@ -1,4 +1,4 @@
-import ErrorIcon from "../../Asset/svg/icons/error.svg?react";
+import ErrorIcon from "@svg/error.svg?react";
 
 import "./PopUp.scss";
 

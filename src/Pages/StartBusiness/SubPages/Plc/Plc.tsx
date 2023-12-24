@@ -19,7 +19,7 @@ const Plc = () => {
         <BannerContent
           title={name}
           tagLine1="Register your business with"
-          price="Starting @ just Rs 7999/-"
+          price="Starting @ just Rs 9999/-"
           tagLine2="Registration in India"
         />
       </Banner>

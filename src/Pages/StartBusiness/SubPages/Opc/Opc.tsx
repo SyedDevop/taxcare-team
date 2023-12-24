@@ -17,7 +17,7 @@ const Opc = () => {
         <BannerContent
           title={name}
           tagLine1="Register your business with"
-          price="Starting @ just Rs 6499/-"
+          price="Starting @ just Rs 8499/-"
           tagLine2="Registration in India"
         />
       </Banner>
