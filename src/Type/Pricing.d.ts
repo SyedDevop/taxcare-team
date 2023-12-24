@@ -40,6 +40,7 @@ export interface PricingData {
 }
 export interface PricingContainerProp {
   containerTitle?: string;
+  children?: React.ReactNode;
 }
 
 export interface AddonPlusProps {

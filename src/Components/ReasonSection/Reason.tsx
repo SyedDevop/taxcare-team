@@ -1,9 +1,9 @@
 import React from "react";
-import { ReactComponent as HelpIcon } from "../../Asset/svg/help.svg";
-import { ReactComponent as SecurityIcon } from "../../Asset/svg/Group.svg";
-import { ReactComponent as PlaningIcon } from "../../Asset/svg/planing.svg";
-import { ReactComponent as PaymentIcon } from "../../Asset/svg/payments.svg";
-import { ReactComponent as AssistIcon } from "../../Asset/svg/assist.svg";
+import HelpIcon from "../../Asset/svg/help.svg?react";
+import SecurityIcon from "../../Asset/svg/Group.svg?react";
+import PlaningIcon from "../../Asset/svg/planing.svg?react";
+import PaymentIcon from "../../Asset/svg/payments.svg?react";
+import AssistIcon from "../../Asset/svg/assist.svg?react";
 import "./Reason.scss";
 import ReasonCard from "./ReasonCard";
 

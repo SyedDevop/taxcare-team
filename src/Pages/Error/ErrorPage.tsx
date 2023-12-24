@@ -1,6 +1,6 @@
 import { useHistory, useLocation } from "react-router-dom";
 
-import { ReactComponent as Error404svg } from "../../Asset/svg/404svg1.svg";
+import Error404svg from "../../Asset/svg/404svg1.svg?react";
 
 import "./ErrorPage.scss";
 const ErrorPage = () => {

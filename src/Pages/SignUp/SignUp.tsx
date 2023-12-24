@@ -18,7 +18,7 @@ type SignUpInput = {
   name: string;
   email: string;
   password: string;
-  conPass: string;
+  conPass?: string;
 };
 
 const SignUp = () => {
@@ -34,9 +34,7 @@ const SignUp = () => {
       .string()
       .min(8, "password has to be longer than 8 characters!")
       .required("password is required"),
-    conPass: yup
-      .string()
-      .oneOf([yup.ref("password"), null], "passwords must match"),
+    conPass: yup.string().oneOf([yup.ref("password")], "passwords must match"),
   });
 
   const {

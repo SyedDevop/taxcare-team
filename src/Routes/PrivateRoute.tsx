@@ -8,8 +8,18 @@ const PrivateRoute: React.FC<RouteProps> = ({ children, ...rest }) => {
   return (
     <Route
       {...rest}
-      render={() =>
-        user ? children : <Redirect to="/login" />
+      //@ts-ignore
+      render={({ location }) =>
+        user === null ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: location },
+            }}
+          />
+        )
       }
     />
   );

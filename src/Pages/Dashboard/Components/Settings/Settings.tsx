@@ -9,7 +9,7 @@ import "./settings.scss";
 import { ErrorPopUp, Modal } from "../../../../Components/PopUp";
 import { useState } from "react";
 
-type FormData = { newPass: string; rePass: string; firebase: string };
+// type FormData = { newPass: string; rePass: string; firebase: string };
 
 const schema = yup.object().shape({
   newPass: yup
@@ -19,7 +19,8 @@ const schema = yup.object().shape({
     .required("Password is required"),
   rePass: yup
     .string()
-    .oneOf([yup.ref("newPass"), null], "Passwords must match"),
+    .oneOf([yup.ref("newPass"), undefined], "Passwords must match"),
+  firebase: yup.string(),
 });
 
 const Settings = () => {
@@ -31,13 +32,13 @@ const Settings = () => {
     formState: { errors },
     setError,
     reset,
-  } = useForm<FormData>({
+  } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = handleSubmit(async ({ rePass }) => {
+  const onSubmit = handleSubmit(async ({ newPass }) => {
     try {
-      await updateUserPassword(rePass);
+      await updateUserPassword(newPass);
       setPopUpBoxState((pre) => !pre);
       reset();
     } catch (err) {

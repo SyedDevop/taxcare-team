@@ -28,7 +28,7 @@
 }
 
 @mixin InputStyle {
-  border-bottom: 5px solid hsl(202, 66, 10);
+  border-bottom: 5px solid hsl(202, 66%, 10%);
   &:focus,
   &:not(:placeholder-shown) {
     border-color: red;

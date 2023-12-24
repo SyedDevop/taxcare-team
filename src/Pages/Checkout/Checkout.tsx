@@ -14,7 +14,7 @@ import { Modal } from "../../Components/PopUp";
 import "./Checkout.scss";
 import { useState } from "react";
 
-const schema: yup.SchemaOf<FormInput> = yup.object().shape({
+const schema = yup.object().shape({
   name: yup.string().min(2, "Need at least 2 characters.").required(),
   email: yup.string().email().required(),
   phoneNumber: yup

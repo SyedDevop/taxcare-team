@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { animateScroll as Scroll } from "react-scroll";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import { ReactComponent as Logo } from "../../Asset/img/LOGO.svg";
+import Logo from "../../Asset/img/LOGO.svg?react";
 import { useButtonState } from "./ButtonState";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";

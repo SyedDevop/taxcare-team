@@ -12,15 +12,19 @@ import { AuthError } from "firebase/auth";
 import Loader from "../../Loader/Loader";
 interface Props {}
 
-type FormData = {
-  email: string;
-  firebase: string;
-};
-const schema = yup.object().shape({
-  email: yup.string().email().required(),
-});
+// type FormData = {
+//   email: string;
+//   firebase: string;
+// };
+const schema = yup
+  .object()
+  .shape({
+    email: yup.string().email().required(),
+    firebase: yup.string(),
+  })
+  .required();
 
-const ForgetPassword = (props: Props) => {
+const ForgetPassword = (_props: Props) => {
   const [messageBox, setMessageBox] = useState(false);
   const [loader, setLoader] = useState(false);
   const { userPasswordResetEmail } = useAuth();
@@ -30,11 +34,11 @@ const ForgetPassword = (props: Props) => {
     handleSubmit,
     formState: { errors },
     setError,
-  } = useForm<FormData>({
+  } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = handleSubmit(async ({ email }) => {
+  const onSubmit = handleSubmit(async ({ email }: any) => {
     try {
       setLoader((pre) => !pre);
       await userPasswordResetEmail(email);

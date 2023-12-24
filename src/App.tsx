@@ -1,4 +1,4 @@
-import { FC } from "react";
+///<reference types="vite-plugin-svgr/client" />;
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import ErrorPage from "./Pages/Error/ErrorPage";
@@ -6,7 +6,7 @@ import { ForgetPassword, LoginForm } from "./Components/Auth";
 import SignUp from "./Pages/SignUp/SignUp";
 import PublicRoute from "./Routes/PublicRoute";
 
-const App: FC = () => {
+function App() {
   return (
     <>
       <div className="App">
@@ -24,6 +24,6 @@ const App: FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default App;

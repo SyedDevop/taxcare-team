@@ -3,7 +3,7 @@ import ErrorIcon from "@material-ui/icons/Error";
 import "./PopUp.scss";
 
 interface Props {
-  children: string;
+  children?: React.ReactNode;
 }
 
 const ErrorPopUp = (props: Props) => {

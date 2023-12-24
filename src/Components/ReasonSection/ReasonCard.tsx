@@ -1,6 +1,5 @@
-import { SVGProps } from "react";
 interface Props {
-  svg: SVGProps<SVGAElement>;
+  svg: React.ReactNode;
   heading: string;
   paragraph: string;
 }

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ReactComponent as ServicesLogo } from "../../Asset/svg/services-logo.svg";
+import ServicesLogo from "../../Asset/svg/services-logo.svg?react";
 import "./OurService.scss";
 import ServiceCard from "./ServiceCard";
 import { useServiceState } from "./Service";
@@ -65,7 +65,7 @@ const OurService: FC = () => {
         <div className="serviceCard gridTemplate" id={btnActive}>
           {list.map((service, key) => {
             const serviceKey = Object.keys(
-              service
+              service,
             ).toString() as keyof typeof service;
             const {
               [serviceKey]: [

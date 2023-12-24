@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import { useLockBodyScroll } from "../../Hooks";
 import { CSSTransition } from "react-transition-group";
-import { ReactComponent as CheckCircle } from "../../Asset/svg/check-circle.svg";
+import CheckCircle from "../../Asset/svg/check-circle.svg?react";
 
 import "./modal.scss";
 

@@ -19,7 +19,7 @@ interface allFilesType {
 const UploadDoc = () => {
   const [fileList, setFileList] = useState<allFilesType[]>([]);
   const [uploadProgress, setUploadProgress] = useState(0);
-  const onDrop = useCallback((acceptedFiles) => {
+  const onDrop = useCallback((acceptedFiles: any) => {
     // Do something with the files
     setFileList((pre) => [...pre, ...acceptedFiles]);
   }, []);

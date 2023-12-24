@@ -4,6 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import "./Backdrop.scss";
 type Props = {
   open: boolean;
+  children?: React.ReactNode;
 };
 
 const Backdrop: React.FC<Props> = ({ open, children }) => {

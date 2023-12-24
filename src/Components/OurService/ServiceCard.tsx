@@ -1,13 +1,10 @@
-import { SVGProps } from "react";
-
 interface Props {
   title: string;
   price: string;
   description: string;
   viewLink: string;
-  svg: SVGProps<SVGAElement>;
+  svg: React.ReactNode;
 }
-
 const ServiceCard = (props: Props) => {
   return (
     <div className={"card"}>

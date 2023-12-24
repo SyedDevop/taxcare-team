@@ -22,13 +22,13 @@ import {
 import { isDev } from "../Utils";
 
 export const app = initializeApp({
-  apiKey: process.env.REACT_APP_FB_API,
-  authDomain: process.env.REACT_APP_FB_DOMAIN,
-  projectId: process.env.REACT_APP_FB_PROJECT,
-  storageBucket: process.env.REACT_APP_FB_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FB_SENDER,
-  appId: process.env.REACT_APP_FB_APP,
-  measurementId: process.env.REACT_APP_FB_MEASUREMENT_ID,
+  apiKey: import.meta.env.VITE_APP_FB_API,
+  authDomain: import.meta.env.VITE_APP_FB_DOMAIN,
+  projectId: import.meta.env.VITE_APP_FB_PROJECT,
+  storageBucket: import.meta.env.VITE_APP_FB_BUCKET,
+  messagingSenderId: import.meta.env.VITE_APP_FB_SENDER,
+  appId: import.meta.env.VITE_APP_FB_APP,
+  measurementId: import.meta.env.VITE_APP_FB_MEASUREMENT_ID,
 });
 
 export interface AuthContextValue {
@@ -37,7 +37,7 @@ export interface AuthContextValue {
   createUser: (email: string, password: string) => Promise<UserCredential>;
   signInUser: (email: string, password: string) => Promise<boolean>;
   signOutUser: () => void;
-  updateUserPassword: (password: string) => Promise<void> | String;
+  updateUserPassword: (password: string) => Promise<void> | string;
   userPasswordResetEmail: (email: string) => Promise<void>;
   emailVerification: (user: User) => Promise<void>;
 }
@@ -50,7 +50,9 @@ export const useAuth = () => {
 };
 
 // Provide hook that creates auth object and handles state.
-export const AuthProvider: FC = ({ children }) => {
+export const AuthProvider: FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [user, setUser] = useState<User | null>(null);
   const [isAuthenticating, setIsAuthenticating] = useState<boolean>(true);
   const auth = getAuth(app);
@@ -97,7 +99,7 @@ export const AuthProvider: FC = ({ children }) => {
       (userCredentials) => {
         setUser(userCredentials.user);
         return true;
-      }
+      },
     );
   };
 

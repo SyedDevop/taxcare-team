@@ -1,5 +1,5 @@
 import "./Footer.scss";
-import { ReactComponent as Logo } from "../../Asset/img/LOGO.svg";
+import Logo from "../../Asset/img/LOGO.svg?react";
 import PhoneIcon from "@material-ui/icons/Phone";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -35,12 +35,12 @@ const Footer = () => {
           {/* Telephone */}
           <div>
             <div className="links">
-                <span>
-                  <PhoneIcon />
-                </span>
-                <div>
-                  <a href="tel:+917204846154">+91 720-484-6154</a>
-                </div>
+              <span>
+                <PhoneIcon />
+              </span>
+              <div>
+                <a href="tel:+917204846154">+91 720-484-6154</a>
+              </div>
             </div>
             {/* Email */}
             <div>
@@ -51,13 +51,13 @@ const Footer = () => {
         </div>
         {/* Address */}
         <div className="address">
-        <h3>Address</h3>
+          <h3>Address</h3>
           <div>
-              <PinDropIcon />
-              <p>
-                # 92 11th cross 2nd main Somashwara Nagar Jaynagar 1st Block
-                Bangalore-11
-              </p>
+            <PinDropIcon />
+            <p>
+              # 92 11th cross 2nd main Somashwara Nagar Jaynagar 1st Block
+              Bangalore-11
+            </p>
           </div>
         </div>
       </div>

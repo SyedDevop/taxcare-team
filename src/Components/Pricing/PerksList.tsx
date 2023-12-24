@@ -1,6 +1,6 @@
-import { ReactComponent as Done } from "../../Asset/svg/done.svg";
+import Done from "../../Asset/svg/done.svg?react";
 
-const PerksList = ({ perksName }: { perksName: String }) => {
+const PerksList = ({ perksName }: { perksName: string }) => {
   return (
     <li>
       {perksName.startsWith("(") ? (

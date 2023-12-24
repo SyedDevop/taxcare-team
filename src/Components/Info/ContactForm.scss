@@ -13,7 +13,8 @@
       grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
       margin-top: 25px;
       gap: 1rem;
-      * > {
+      // TODO : check how is "* >" selecting the element
+      * {
         grid-column: span 1;
       }
       @media (min-width: $mobile) {
