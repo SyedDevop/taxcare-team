@@ -1,11 +1,12 @@
-import PhoneIcon from "@material-ui/icons/Phone";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import EmailIcon from "@material-ui/icons/Email";
 import { Link } from "react-router-dom";
 import "./HeaderBar.scss";
 import { Link as ScrollLink } from "react-scroll";
+
+import PhoneIcon from "../../Asset/svg/icons/phone.svg?react";
+import TwitterIcon from "../../Asset/svg/icons/twitter.svg?react";
+import FacebookIcon from "../../Asset/svg/icons/fb.svg?react";
+import InstagramIcon from "../../Asset/svg/icons/instagram.svg?react";
+import EmailIcon from "../../Asset/svg/icons/contact_mail.svg?react";
 
 const HeaderBar = () => {
   return (

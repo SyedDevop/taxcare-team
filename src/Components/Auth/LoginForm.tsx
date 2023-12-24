@@ -3,7 +3,7 @@ import { useHistory, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import CloseIcon from "@material-ui/icons/Close";
+import CloseIcon from "../../Asset/svg/icons/close.svg?react";
 
 import { useAuth } from "../../Hooks";
 import { ErrorPopUp } from "../PopUp/PopUp";

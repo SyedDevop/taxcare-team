@@ -1,5 +1,5 @@
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
+import AddIcon from "../../../Asset/svg/icons/add.svg?react";
+import RemoveIcon from "../../../Asset/svg/icons/remove.svg?react";
 import { useHistory } from "react-router-dom";
 
 import useHandleIncrement from "./useHandelIncrement";

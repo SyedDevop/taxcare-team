@@ -1,5 +1,5 @@
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
+import AddIcon from "../../../Asset/svg/icons/add.svg?react";
+import RemoveIcon from "../../../Asset/svg/icons/remove.svg?react";
 
 import { AddonPlusProps } from "../../../Type";
 
@@ -18,7 +18,7 @@ const AddonPlus = ({ addOns, addOnSet, addOnSetData }: AddonPlusProps) => {
                 }}
               >
                 {addOnSetData.some(
-                  (object) => object.addOnPlanId === addOnPlanId
+                  (object) => object.addOnPlanId === addOnPlanId,
                 ) ? (
                   <RemoveIcon />
                 ) : (

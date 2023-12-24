@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { animateScroll as Scroll } from "react-scroll";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import ChevronRightIcon from "../../Asset/svg/icons/right.svg?react";
 import "./Scroll.scss";
 
 export default function ScrollToTop() {

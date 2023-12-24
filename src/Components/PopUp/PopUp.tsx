@@ -1,4 +1,4 @@
-import ErrorIcon from "@material-ui/icons/Error";
+import ErrorIcon from "../../Asset/svg/icons/error.svg?react";
 
 import "./PopUp.scss";
 

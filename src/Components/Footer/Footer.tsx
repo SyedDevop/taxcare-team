@@ -1,11 +1,11 @@
 import "./Footer.scss";
 import Logo from "../../Asset/img/LOGO.svg?react";
-import PhoneIcon from "@material-ui/icons/Phone";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import EmailIcon from "@material-ui/icons/Email";
-import PinDropIcon from "@material-ui/icons/PinDrop";
+import PhoneIcon from "../../Asset/svg/icons/phone.svg?react";
+import TwitterIcon from "../../Asset/svg/icons/twitter.svg?react";
+import FacebookIcon from "../../Asset/svg/icons/fb.svg?react";
+import InstagramIcon from "../../Asset/svg/icons/instagram.svg?react";
+import EmailIcon from "../../Asset/svg/icons/contact_mail.svg?react";
+import LocationIcon from "../../Asset/svg/icons/location.svg?react";
 
 const Footer = () => {
   return (
@@ -53,7 +53,7 @@ const Footer = () => {
         <div className="address">
           <h3>Address</h3>
           <div>
-            <PinDropIcon />
+            <LocationIcon />
             <p>
               # 92 11th cross 2nd main Somashwara Nagar Jaynagar 1st Block
               Bangalore-11

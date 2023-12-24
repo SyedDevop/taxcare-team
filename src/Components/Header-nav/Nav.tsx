@@ -1,13 +1,13 @@
 import { FC, ReactNode } from "react";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { Link } from "react-router-dom";
 import { animateScroll as Scroll } from "react-scroll";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+import AccountCircleIcon from "../../Asset/svg/icons/account.svg?react";
+import ExpandMoreIcon from "../../Asset/svg/icons/expand_more.svg?react";
+import MenuIcon from "../../Asset/svg/icons/menu.svg?react";
+import CloseIcon from "../../Asset/svg/icons/close.svg?react";
 import Logo from "../../Asset/img/LOGO.svg?react";
 import { useButtonState } from "./ButtonState";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
 import { NavLinkData } from "./NavLinkData";
 import { useAuth } from "../../Hooks";
 
