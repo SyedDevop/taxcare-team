@@ -3,7 +3,7 @@
 .headerBar {
   background-color: $black-dark;
   width: 100%;
-  height: 50px;
+  height: var(--header-bar-hg);
   .container {
     display: flex;
     align-items: center;

@@ -31,10 +31,9 @@
   }
 }
 
-// Hero Styles
 @mixin banners-style {
   width: 100%;
-  min-height: calc(100vh - 110px);
+  height: calc(100dvh - (110px + (var(--header-bar-hg, 0px))));
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
