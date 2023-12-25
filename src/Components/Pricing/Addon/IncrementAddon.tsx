@@ -1,12 +1,12 @@
 import AddIcon from "@icons/add.svg?react";
 import RemoveIcon from "@icons/remove.svg?react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 import useHandleIncrement from "./useHandelIncrement";
-import Button from "../PricingButton";
+// import Button from "../PricingButton";
 
-import { AddonData } from "../../../Type";
-import { useLocalStorage } from "../../../Hooks";
+import { AddonData } from "@/Type";
+// import { useLocalStorage } from "../../../Hooks";
 
 export interface IncrementAddonData {
   addOnPlanId: string;
@@ -27,24 +27,23 @@ const IncrementAddon = ({
   subTitle,
   perks,
   increment,
-  setIncrement,
-  submit,
+  setIncrement, // submit,
 }: IncrementAddonProps) => {
   const { handleIncrementSet } = useHandleIncrement({
     setIncrement,
     addOnPrice,
     addOnPlanId,
   });
-  const history = useHistory();
-  const [, setOrders] = useLocalStorage("orderData");
-  const handleClicks = async () => {
-    await setOrders({
-      price: increment.addOnPrice,
-      planId: increment.addOnPlanId,
-      planType: perks,
-    });
-    history.push(`/checkout`);
-  };
+  // const history = useHistory();
+  // const [, setOrders] = useLocalStorage("orderData");
+  // const handleClicks = async () => {
+  //   await setOrders({
+  //     price: increment.addOnPrice,
+  //     planId: increment.addOnPlanId,
+  //     planType: perks,
+  //   });
+  //   history.push(`/checkout`);
+  // };
 
   return (
     <div className="increment-addons">
@@ -79,8 +78,10 @@ const IncrementAddon = ({
           <RemoveIcon />
         </button>
       </div>
-
-      {submit && <Button onClick={handleClicks} />}
+      <button type="button" className="btn">
+        SELECT
+      </button>
+      {/* {submit && <Button onClick={handleClicks} />} */}
     </div>
   );
 };

@@ -19,6 +19,7 @@ const ContactForm = () => {
               name="name"
               id="name"
               placeholder="name"
+              autoComplete="name"
               required
             ></input>
             <label htmlFor="name">Name</label>
@@ -29,6 +30,7 @@ const ContactForm = () => {
               name="email"
               id="email"
               placeholder="email"
+              autoComplete="email"
               required
             />
             <label htmlFor="email">Email</label>
@@ -40,6 +42,7 @@ const ContactForm = () => {
               name="subject"
               id="subject"
               placeholder="subject"
+              autoComplete="on"
               required
             />
             <label htmlFor="subject">Subject</label>
@@ -52,6 +55,7 @@ const ContactForm = () => {
               maxLength={10}
               minLength={10}
               placeholder="phone number"
+              autoComplete="tel"
               required
             />
             <label htmlFor="phoneNumber">Phone</label>
@@ -66,6 +70,7 @@ const ContactForm = () => {
               cols={30}
               rows={5}
               placeholder="message"
+              autoComplete="on"
               required
             ></textarea>
             <label htmlFor="message" className="mes">
@@ -74,9 +79,8 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <button type="button" onClick={() => setOpen((pre) => !pre)}>
-          Send
-        </button>
+        {/* TODO : add send message function to button */}
+        <button type="button">Send</button>
       </form>
       <Modal
         modalState={open}

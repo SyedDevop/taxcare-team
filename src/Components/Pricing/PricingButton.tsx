@@ -8,8 +8,8 @@ type Props = {
   onClick: (value?: any) => void;
 };
 
-console.log(isDev());
-
+// TODO : This is a temporary Pricebutton.
+// Remove this after implement backend to place order
 const PricingButton = ({ onClick }: Props) => {
   const [open, setOpen] = useState(false);
   return (
