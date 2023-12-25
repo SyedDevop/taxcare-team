@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { updateProfile } from "firebase/auth";
 
-import { useFetchSignUp } from "../../Api";
-import { useAuth } from "../../Hooks";
-import Backdrop from "../../Components/Backdrop/Backdrop";
-import Loader from "../../Components/Loader/Loader";
-import FullscreenImage from "../../Components/FullSreenImage/FullscreenImage";
+import { useFetchSignUp } from "@/Api";
+import { useAuth } from "@/Hooks";
+import Backdrop from "@/Components/Backdrop/Backdrop";
+import Loader from "@/Components/Loader/Loader";
+import FullscreenImage from "@/Components/FullSreenImage/FullscreenImage";
 
 import "./SignUp.scss";
-import { ErrorPopUp } from "../../Components/PopUp";
+import { ErrorPopUp } from "@/Components/PopUp";
 
 type SignUpInput = {
   name: string;
@@ -25,7 +25,7 @@ const SignUp = () => {
   const [loader, setLoader] = useState(false);
   const { data, isFetching } = useFetchSignUp();
   const { createUser, emailVerification } = useAuth();
-  const history = useHistory();
+  // const history = useHistory();
 
   const schema = yup.object().shape({
     name: yup.string().min(3, "name must be 3 character").required(),
@@ -41,7 +41,7 @@ const SignUp = () => {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
+    // setError,
     setValue,
   } = useForm<SignUpInput>({
     resolver: yupResolver(schema),

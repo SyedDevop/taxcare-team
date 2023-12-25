@@ -1,12 +1,12 @@
-import BannerImg from "../../../../Asset/img/banner1.webp";
-import { Banner, BannerContent } from "../../../../Components/Banner/Banner";
-import { ProcessSteps } from "../../../../Components/ProcessSteps/ProcessSteps";
+import BannerImg from "@/assets/img/banner1.webp";
+import { Banner, BannerContent } from "@/Components/Banner/Banner";
+import { ProcessSteps } from "@/Components/ProcessSteps/ProcessSteps";
 import {
   PricingSection,
   PricingContainer,
   PricingCards,
-} from "../../../../Components/Pricing";
-import { WhatIsSection } from "../../../../Components/WhatIs/WhatIs";
+} from "@/Components/Pricing";
+import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { ImportExportData } from "./ImportExportData";
 
 const ImportExport = () => {

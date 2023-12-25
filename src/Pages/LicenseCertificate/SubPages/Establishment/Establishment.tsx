@@ -1,14 +1,14 @@
-import BannerImg from "../../../../Asset/img/banner1.webp";
-import { Banner, BannerContent } from "../../../../Components/Banner/Banner";
-import { ProcessSteps } from "../../../../Components/ProcessSteps/ProcessSteps";
+import BannerImg from "@/assets/img/banner1.webp";
+import { Banner, BannerContent } from "@/Components/Banner/Banner";
+import { ProcessSteps } from "@/Components/ProcessSteps/ProcessSteps";
 import {
   PricingSection,
   PricingCards,
   PricingContainer,
-} from "../../../../Components/Pricing";
-import { WhatIsSection } from "../../../../Components/WhatIs/WhatIs";
+} from "@/Components/Pricing";
+import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { EstablishData } from "./EstablishmentData";
-import OutBoundLink from "../../../../Components/OutBoundLink/OutBoundLink";
+import OutBoundLink from "@/Components/OutBoundLink/OutBoundLink";
 
 const Establishment = () => {
   const [{ registrationProcess, pricing, whatIs }] = EstablishData;

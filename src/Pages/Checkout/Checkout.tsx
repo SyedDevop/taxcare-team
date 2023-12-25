@@ -3,13 +3,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { FormProvider, useForm } from "react-hook-form";
 
 import { useAuth, useLocalStorage } from "../../Hooks";
-import { OrderSummary, FormInput } from "../../Type";
+import { OrderSummary, FormInput } from "@/Type";
 
 import OrderBriefIfLoggedOut from "./Components/OrderBriefIfLoggedOut";
 import OrderBriefIfLoggedIn from "./Components/OrderBriefIfLoggedIn";
 import FormInputs from "./Components/FormInputs";
 import OrderSection from "./Components/OrderSection/OrderSection";
-import { Modal } from "../../Components/PopUp";
+import { Modal } from "@/Components/PopUp";
 
 import "./Checkout.scss";
 import { useState } from "react";

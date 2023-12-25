@@ -1,9 +1,9 @@
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
-import { useFirebaseStore } from "../../../../Hooks";
+import { useFirebaseStore } from "@/Hooks";
 import { UploadTask } from "firebase/storage";
 
-import GoingUp from "../../../../Asset/svg/going_up2.svg";
+import GoingUp from "@/assets/svg/going_up2.svg";
 
 import "./UploadDoc.scss";
 

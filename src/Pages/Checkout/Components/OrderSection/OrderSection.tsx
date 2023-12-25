@@ -1,13 +1,13 @@
 import { UseFormReturn } from "react-hook-form";
 
-import { OrderSummary, FormInput } from "../../../../Type";
+import { OrderSummary, FormInput } from "@/Type";
 import { useOrderSection } from "./UseOrderSection";
-import { numberToCurrency } from "../../../../Utils";
+import { numberToCurrency } from "@/Utils";
 
 import OrderDetails from "../OrderDetails";
 import PlaceOrderBtn from "../buttonProps";
 import DiscountSection from "../../Components/DiscountSection";
-import Loader from "../../../../Components/Loader/Loader";
+import Loader from "@/Components/Loader/Loader";
 import { useState } from "react";
 
 export interface OrderSectionProps extends OrderSummary {

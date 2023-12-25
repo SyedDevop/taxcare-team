@@ -2,14 +2,15 @@ import { FC, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as Scroll } from "react-scroll";
 
-import AccountCircleIcon from "../../Asset/svg/icons/account.svg?react";
-import ExpandMoreIcon from "../../Asset/svg/icons/expand_more.svg?react";
-import MenuIcon from "../../Asset/svg/icons/menu.svg?react";
-import CloseIcon from "../../Asset/svg/icons/close.svg?react";
-import Logo from "../../Asset/img/LOGO.svg?react";
+import AccountCircleIcon from "@icons/account.svg?react";
+import ExpandMoreIcon from "@icons/expand_more.svg?react";
+import MenuIcon from "@icons/menu.svg?react";
+import CloseIcon from "@icons/close.svg?react";
+import { useAuth } from "@/Hooks";
+
+import Logo from "../../assets/img/LOGO.svg?react";
 import { useButtonState } from "./ButtonState";
 import { NavLinkData } from "./NavLinkData";
-import { useAuth } from "../../Hooks";
 
 import "./Nav.scss";
 interface Props {
@@ -19,13 +20,6 @@ interface Props {
 const NavBar = () => {
   const { mobileNav, updateMobileNav } = useButtonState();
   const { user, signOutUser } = useAuth();
-  // const onSubmit = async () => {
-  //   try {
-  //     await createUser("syedyzairahmed70@gmail.com", "windows8");
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
 
   return (
     <nav id="nav">

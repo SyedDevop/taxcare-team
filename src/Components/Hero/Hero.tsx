@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
+
 import "./Hero.scss";
 import "./Animate.scss";
-import background from "../../Asset/img/banner.webp";
+import background from "../../assets/img/banner.webp";
 import HeroContent from "./HeroContent";
 import TagLine from "../TagLine/TagLine";
 

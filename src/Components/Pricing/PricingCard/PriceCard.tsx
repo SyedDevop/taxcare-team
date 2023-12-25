@@ -1,11 +1,11 @@
 import { useCallback } from "react";
 import { useHistory } from "react-router-dom";
 
-import { PriceCardProp } from "../../../Type";
+import { PriceCardProp } from "@/Type";
 import PerksList from "../PerksList";
 import Button from "../PricingButton";
 
-import { useLocalStorage } from "../../../Hooks";
+import { useLocalStorage } from "@/Hooks";
 
 // TODO: remove the prop name (PricingProp)
 // TODO: remove text.scss

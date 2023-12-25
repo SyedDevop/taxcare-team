@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AvTimerIcon from "../../Asset/svg/icons/av_timer.svg?react";
+import AvTimerIcon from "../../assets/svg/icons/av_timer.svg?react";
 
 import { Modal } from "../PopUp";
 import { isDev } from "../../Utils";

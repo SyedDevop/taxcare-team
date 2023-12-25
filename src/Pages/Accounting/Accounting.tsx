@@ -1,18 +1,18 @@
-import BannerImg from "../../Asset/img/banner1.webp";
-import { Banner, BannerContent } from "../../Components/Banner/Banner";
+import BannerImg from "../../assets/img/banner1.webp";
+import { Banner, BannerContent } from "@/Components/Banner/Banner";
 import {
   PricingSection,
   PricingCards,
   PricingContainer,
 } from "../../Components/Pricing";
-import { WhatIsSection } from "../../Components/WhatIs/WhatIs";
+// import { WhatIsSection } from "../../Components/WhatIs/WhatIs";
 import { AccountingData } from "./AccountingData";
 
 const Accounting = () => {
   const [
     {
       pricing: [plan1, plan2],
-      whatIs,
+      // whatIs,
     },
   ] = AccountingData;
   const pageTitle = "Accounting and Book keeping";

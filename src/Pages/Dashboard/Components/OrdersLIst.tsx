@@ -1,5 +1,5 @@
-import { ExistingUserOrder } from "../../../Type";
-import { numberToCurrency } from "../../../Utils";
+import { ExistingUserOrder } from "@/Type";
+import { numberToCurrency } from "@/Utils";
 import "./OrdersList.scss";
 
 const OrdersLIst = ({ list }: { list: ExistingUserOrder[] }) => {
@@ -8,13 +8,13 @@ const OrdersLIst = ({ list }: { list: ExistingUserOrder[] }) => {
       {list.map(
         (
           { discountPrice, orderDetails, orderId, orderStates, issuedDate },
-          key
+          key,
         ) => {
           const date = issuedDate?.toDate().toLocaleDateString();
           const allAddOnPrice =
             orderDetails.addOnRecord?.reduce(
               (total, recode) => total + recode.addOnPrice,
-              0
+              0,
             ) || 0;
           return (
             <div className="orders" key={key}>
@@ -49,7 +49,7 @@ const OrdersLIst = ({ list }: { list: ExistingUserOrder[] }) => {
                             <h2>{numberToCurrency(addOnPrice)}</h2>
                           </div>
                         );
-                      }
+                      },
                     )}
                   </div>
                 </>
@@ -75,7 +75,7 @@ const OrdersLIst = ({ list }: { list: ExistingUserOrder[] }) => {
                 <div>
                   <h2>
                     {numberToCurrency(
-                      orderDetails.price + allAddOnPrice - discountPrice
+                      orderDetails.price + allAddOnPrice - discountPrice,
                     )}
                   </h2>
                 </div>
@@ -91,7 +91,7 @@ const OrdersLIst = ({ list }: { list: ExistingUserOrder[] }) => {
               </div>
             </div>
           );
-        }
+        },
       )}
     </main>
   );

@@ -1,5 +1,6 @@
 import { FC } from "react";
-import ServicesLogo from "../../Asset/svg/services-logo.svg?react";
+
+import ServicesLogo from "@svg/services-logo.svg?react";
 import "./OurService.scss";
 import ServiceCard from "./ServiceCard";
 import { useServiceState } from "./Service";

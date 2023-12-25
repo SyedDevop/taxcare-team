@@ -3,10 +3,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { AuthError } from "firebase/auth";
 
-import { useAuth } from "../../../../Hooks/index";
+import { useAuth } from "@/Hooks/index";
 
 import "./settings.scss";
-import { ErrorPopUp, Modal } from "../../../../Components/PopUp";
+import { ErrorPopUp, Modal } from "@/Components/PopUp";
 import { useState } from "react";
 
 // type FormData = { newPass: string; rePass: string; firebase: string };

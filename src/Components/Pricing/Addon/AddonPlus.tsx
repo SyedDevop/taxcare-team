@@ -1,5 +1,5 @@
-import AddIcon from "../../../Asset/svg/icons/add.svg?react";
-import RemoveIcon from "../../../Asset/svg/icons/remove.svg?react";
+import AddIcon from "@icons/add.svg?react";
+import RemoveIcon from "@icons/remove.svg?react";
 
 import { AddonPlusProps } from "../../../Type";
 

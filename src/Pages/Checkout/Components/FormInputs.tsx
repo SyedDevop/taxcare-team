@@ -1,4 +1,4 @@
-import { ErrorPopUp } from "../../../Components/PopUp/PopUp";
+import { ErrorPopUp } from "@/Components/PopUp/PopUp";
 import { useFormContext } from "react-hook-form";
 
 const FormInputs = () => {

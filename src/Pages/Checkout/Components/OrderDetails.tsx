@@ -1,5 +1,5 @@
-import { OrderSummary } from "../../../Type/Checkout";
-import { numberToCurrency } from "../../../Utils/currencyFormate";
+import { OrderSummary } from "@/Type/Checkout";
+import { numberToCurrency } from "@/Utils/currencyFormate";
 
 const OrderDetails = ({
   planId,

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 
-import { useDb, useAuth } from "../../Hooks";
-import { ExistingUserOrder } from "../../Type";
+import { useDb, useAuth } from "@/Hooks";
+import { ExistingUserOrder } from "@/Type";
 
 import OrdersLIst from "./Components/OrdersLIst";
 import UploadDoc from "./Components/UploadDocuments/UploadDoc";
@@ -23,7 +23,9 @@ const Dashboard = () => {
       try {
         const orderQuery = await orderById(userId);
         setOrderList(
-          orderQuery.docs.map((doc) => ({ ...doc.data() } as ExistingUserOrder))
+          orderQuery.docs.map(
+            (doc) => ({ ...doc.data() }) as ExistingUserOrder,
+          ),
         );
       } catch (err) {
         console.error(err);

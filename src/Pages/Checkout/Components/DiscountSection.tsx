@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { ErrorPopUp } from "../../../Components/PopUp/PopUp";
-import Loader from "../../../Components/Loader/Loader";
+import { ErrorPopUp } from "@/Components/PopUp/PopUp";
+import Loader from "@/Components/Loader/Loader";
 
 interface DiscountSectionProps {
   submit: (discountCode: string) => Promise<boolean>;

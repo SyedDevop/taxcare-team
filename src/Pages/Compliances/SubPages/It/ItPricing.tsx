@@ -1,11 +1,11 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import {
   PricingSection,
   AddonPlus,
   PricingContainer,
   PricingCards,
-} from "../../../../Components/Pricing";
-import { AddonData } from "../../../../Type";
+} from "@/Components/Pricing";
+import { AddonData } from "@/Type";
 
 import { ItData } from "./ItData";
 
@@ -33,12 +33,12 @@ const ItPricing = ({ pageTitle }: Props) => {
     });
   };
 
-  const reduceAddons = (addons: AddonData[]) => {
-    return addons.reduce((acc, curr) => {
-      return acc + curr.addOnPrice;
-    }, 0);
-  };
-  const addonPrice = useCallback(reduceAddons, []);
+  // const reduceAddons = (addons: AddonData[]) => {
+  //   return addons.reduce((acc, curr) => {
+  //     return acc + curr.addOnPrice;
+  //   }, 0);
+  // };
+  // const addonPrice = useCallback(reduceAddons, []);
   return (
     <PricingSection companyType={pageTitle}>
       <PricingContainer containerTitle="(ITR) Add On">

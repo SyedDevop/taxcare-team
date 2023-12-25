@@ -1,6 +1,6 @@
-import BannerImg from "../../../../Asset/img/banner1.webp";
-import { Banner, BannerContent } from "../../../../Components/Banner/Banner";
-import { WhatIsSection } from "../../../../Components/WhatIs/WhatIs";
+import BannerImg from "@/assets/img/banner1.webp";
+import { Banner, BannerContent } from "@/Components/Banner/Banner";
+import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { ItData } from "./ItData";
 import ItPricing from "./ItPricing";
 

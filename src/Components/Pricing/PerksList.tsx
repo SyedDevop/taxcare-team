@@ -1,4 +1,4 @@
-import Done from "../../Asset/svg/done.svg?react";
+import Done from "../../assets/svg/done.svg?react";
 
 const PerksList = ({ perksName }: { perksName: string }) => {
   return (

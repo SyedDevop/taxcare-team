@@ -1,5 +1,5 @@
 import PriceCard from "./PriceCard";
-import { PricingCardsProp } from "../../../Type";
+import { PricingCardsProp } from "@/Type";
 
 const PricingCards = ({
   addons,

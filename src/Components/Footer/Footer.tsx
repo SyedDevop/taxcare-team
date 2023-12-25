@@ -1,11 +1,11 @@
 import "./Footer.scss";
-import Logo from "../../Asset/img/LOGO.svg?react";
-import PhoneIcon from "@svg/phone.svg?react";
-import TwitterIcon from "@svg/twitter.svg?react";
-import FacebookIcon from "@svg/fb.svg?react";
-import InstagramIcon from "@svg/instagram.svg?react";
-import EmailIcon from "@svg/contact_mail.svg?react";
-import LocationIcon from "@svg/location.svg?react";
+import Logo from "../../assets/img/LOGO.svg?react";
+import PhoneIcon from "@icons/phone.svg?react";
+import TwitterIcon from "@icons/twitter.svg?react";
+import FacebookIcon from "@icons/fb.svg?react";
+import InstagramIcon from "@icons/instagram.svg?react";
+import EmailIcon from "@icons/contact_mail.svg?react";
+import LocationIcon from "@icons/location.svg?react";
 
 const Footer = () => {
   return (

@@ -1,8 +1,7 @@
-import StatementImg from "../../Asset/img/statementImg.webp";
+import StatementImg from "../../assets/img/statementImg.webp";
 import "./Statement.scss";
-interface Props {}
 
-const Statement = (props: Props) => {
+const Statement = () => {
   return (
     <section id="statement" style={{ backgroundImage: `url(${StatementImg}` }}>
       <div className="container statementStyle">

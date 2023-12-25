@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Modal } from "../PopUp";
-import AvTimerIcon from "../../Asset/svg/icons/av_timer.svg?react";
+import AvTimerIcon from "@icons/av_timer.svg?react";
 
 import "./ContactForm.scss";
 const ContactForm = () => {

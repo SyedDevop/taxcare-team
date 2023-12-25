@@ -27,6 +27,10 @@ export default defineConfig({
         find: "@svg",
         replacement: resolve(__dirname, "./src/assets/svg"),
       },
+      {
+        find: "@icons",
+        replacement: resolve(__dirname, "./src/assets/svg/icons/"),
+      },
     ],
   },
 });

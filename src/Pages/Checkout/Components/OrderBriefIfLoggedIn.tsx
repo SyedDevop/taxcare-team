@@ -1,4 +1,4 @@
-import { OrderSummary } from "../../../Type/Checkout";
+import { OrderSummary } from "@/Type/Checkout";
 import OrderDetails from "./OrderDetails";
 
 interface OrderBriefIfLoggedInProp {

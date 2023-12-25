@@ -3,13 +3,13 @@ import { useHistory, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import CloseIcon from "../../Asset/svg/icons/close.svg?react";
 
-import { useAuth } from "../../Hooks";
-import { ErrorPopUp } from "../PopUp/PopUp";
-import FullscreenImage from "../FullSreenImage/FullscreenImage";
-import Loader from "../Loader/Loader";
-// import Backdrop from "../../Asset/svg/backDrop.svg";
+import CloseIcon from "@icons/close.svg?react";
+import { useAuth } from "@/Hooks";
+import { ErrorPopUp } from "@/Components/PopUp";
+import FullscreenImage from "@/Components/FullSreenImage/FullscreenImage";
+import Loader from "@/Components/Loader/Loader";
+// import Backdrop from "../../assets/svg/backDrop.svg";
 
 import "./LoginForm.scss";
 

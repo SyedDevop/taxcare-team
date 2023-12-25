@@ -22,7 +22,8 @@
     /* Path*/
     "paths": {
       "@/*": ["./src/*"],
-      "@svg/*": ["./src/assets/svg//*"]
+      "@svg/*": ["./src/assets/svg/*"],
+      "@icons/*": ["./src/assets/svg/icons/*"]
     }
   },
   "include": ["src"],

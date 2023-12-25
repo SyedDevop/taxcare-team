@@ -1,15 +1,15 @@
 import React from "react";
-import HelpIcon from "../../Asset/svg/help.svg?react";
-import SecurityIcon from "../../Asset/svg/Group.svg?react";
-import PlaningIcon from "../../Asset/svg/planing.svg?react";
-import PaymentIcon from "../../Asset/svg/payments.svg?react";
-import AssistIcon from "../../Asset/svg/assist.svg?react";
+import HelpIcon from "@svg/help.svg?react";
+import SecurityIcon from "@svg/Group.svg?react";
+import PlaningIcon from "@svg/planing.svg?react";
+import PaymentIcon from "@svg/payments.svg?react";
+import AssistIcon from "@svg/assist.svg?react";
 import "./Reason.scss";
 import ReasonCard from "./ReasonCard";
 
 interface Props {}
 
-const Reason: React.FC<Props> = (props) => {
+const Reason: React.FC<Props> = () => {
   return (
     <section id="reason">
       <div className="container">
