@@ -10,7 +10,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { GstFilingData } from "@data/GstFilingData";
 
 const GstFiling = () => {
-  const [{ registrationProcess, pricing, whatIs }] = GstFilingData;
+  const { pricing, whatIs } = GstFilingData;
   const pageTitle = "Goods and Services Tax Filing (GST)";
   return (
     <main id="gstfiling">

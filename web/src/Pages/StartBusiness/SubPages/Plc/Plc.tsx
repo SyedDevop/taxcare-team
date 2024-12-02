@@ -10,7 +10,7 @@ import {
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 
 const Plc = () => {
-  const [{ registrationProcess, pricing, whatIs }] = PlcData;
+  const { registrationProcess, pricing, whatIs } = PlcData;
   const name = "Private Limited Company";
   //"filing"
   return (

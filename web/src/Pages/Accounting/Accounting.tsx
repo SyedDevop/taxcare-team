@@ -9,12 +9,9 @@ import {
 import { AccountingData } from "@data/AccountingData";
 
 const Accounting = () => {
-  const [
-    {
-      pricing: [plan1, plan2],
-      // whatIs,
-    },
-  ] = AccountingData;
+  const {
+    pricing: [plan1, plan2],
+  } = AccountingData;
   const pageTitle = "Accounting and Book keeping";
   return (
     <main id="accounting">

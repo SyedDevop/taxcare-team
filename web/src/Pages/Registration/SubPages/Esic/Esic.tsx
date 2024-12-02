@@ -14,7 +14,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { EsicData } from "@data/EsicData";
 
 const Esic = () => {
-  const [{ registrationProcess, pricing, addOns, whatIs }] = EsicData;
+  const { registrationProcess, pricing, addOns, whatIs } = EsicData;
   const name = "Employees State Insurance Corporation (ESIC)";
   const [increment, setIncrement] = useState({
     addOnPlanId: addOns.addOnPlanId,

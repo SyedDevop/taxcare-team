@@ -10,7 +10,7 @@ import {
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 
 const Opc = () => {
-  const [{ registrationProcess, pricing, whatIs }] = LlpData;
+  const { registrationProcess, pricing, whatIs } = LlpData;
   const name = "Limited Liability Partnership ";
 
   return (

@@ -10,7 +10,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { MsmeData } from "@data/MsmeData";
 
 const Msme = () => {
-  const [{ registrationProcess, pricing, whatIs }] = MsmeData;
+  const { registrationProcess, pricing, whatIs } = MsmeData;
   const name = "Ministry of Micro, small & Medium Enterprises. (MSME)";
   return (
     <main id="msme">

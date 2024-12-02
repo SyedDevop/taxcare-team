@@ -9,7 +9,7 @@ import {
 import { ProjectReportData } from "@data/ProjectReportData";
 
 const ProjectReport = () => {
-  const [{ pricing, whatIs }] = ProjectReportData;
+  const { pricing } = ProjectReportData;
   const [plan] = pricing;
   return (
     <main id="projectReport">

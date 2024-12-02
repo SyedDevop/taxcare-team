@@ -10,7 +10,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { TmData } from "@data/TmData";
 
 const Tm = () => {
-  const [{ registrationProcess, pricing, whatIs }] = TmData;
+  const { registrationProcess, pricing, whatIs } = TmData;
   const name = "Trademark Registration";
   return (
     <main id="pf">

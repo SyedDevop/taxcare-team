@@ -10,7 +10,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { ImportExportData } from "@data/ImportExportData";
 
 const ImportExport = () => {
-  const [{ registrationProcess, pricing, whatIs }] = ImportExportData;
+  const { registrationProcess, pricing, whatIs } = ImportExportData;
   const name = "(IEC) Import Export Code";
   return (
     <main id="importExport">

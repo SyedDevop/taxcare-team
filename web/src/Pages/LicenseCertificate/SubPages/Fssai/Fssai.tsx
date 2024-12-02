@@ -11,7 +11,7 @@ import OutBoundLink from "@/Components/OutBoundLink/OutBoundLink";
 import { FssaiData } from "@data/FssaiData";
 
 const Fssai = () => {
-  const [{ registrationProcess, pricing, whatIs }] = FssaiData;
+  const { registrationProcess, pricing, whatIs } = FssaiData;
   const name = "Food Safety and Standards Authority of India (FSSAI)";
   return (
     <main id="fssai">

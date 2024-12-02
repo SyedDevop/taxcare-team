@@ -5,7 +5,7 @@ import { ItData } from "@data/ItData";
 import ItPricing from "./ItPricing";
 
 const It = () => {
-  const [{ whatIs }] = ItData;
+  const { whatIs } = ItData;
   const pageTitle = "Income Tax filing (ITR)";
   return (
     <main id="gstfiling">

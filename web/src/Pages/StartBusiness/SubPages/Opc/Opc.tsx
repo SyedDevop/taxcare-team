@@ -9,7 +9,7 @@ import {
 } from "@/Components/Pricing";
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 const Opc = () => {
-  const [{ registrationProcess, pricing, whatIs }] = OpcData;
+  const { registrationProcess, pricing, whatIs } = OpcData;
   const name = "One Person Company";
   return (
     <main id="plc">

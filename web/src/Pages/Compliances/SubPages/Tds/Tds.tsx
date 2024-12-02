@@ -10,7 +10,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { TdsData } from "@data/TdsData";
 
 const Tds = () => {
-  const [{ registrationProcess, pricing, whatIs }] = TdsData;
+  const { pricing, whatIs } = TdsData;
   const pageTitle = "Tax Deducted at Source filing (TDS)";
   return (
     <main id="tds">

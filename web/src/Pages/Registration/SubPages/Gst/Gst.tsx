@@ -10,7 +10,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { GstData } from "@data/GstData";
 
 const Gst = () => {
-  const [{ registrationProcess, pricing, whatIs }] = GstData;
+  const { registrationProcess, pricing, whatIs } = GstData;
   const name = "(GST) Registration";
   return (
     <main id="gst">

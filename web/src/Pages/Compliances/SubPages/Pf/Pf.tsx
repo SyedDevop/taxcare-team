@@ -10,7 +10,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { PfData } from "@data/PfData";
 
 const Pf = () => {
-  const [{ registrationProcess, pricing, whatIs }] = PfData;
+  const { pricing, whatIs } = PfData;
   const name = "Karnataka Professional Tax (PT)";
   // TODO3: reformat pf full form
   return (

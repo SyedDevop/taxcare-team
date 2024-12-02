@@ -10,7 +10,7 @@ import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import { RocData } from "@data/RocData";
 
 const Roc = () => {
-  const [{ registrationProcess, pricing, whatIs }] = RocData;
+  const { pricing, whatIs } = RocData;
   const pageTitle = "Registrar of Companies filing (ROC)";
   return (
     <main id="roc">

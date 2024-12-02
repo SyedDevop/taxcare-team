@@ -11,7 +11,7 @@ import { EstablishData } from "@data/EstablishmentData";
 import OutBoundLink from "@/Components/OutBoundLink/OutBoundLink";
 
 const Establishment = () => {
-  const [{ registrationProcess, pricing, whatIs }] = EstablishData;
+  const { registrationProcess, pricing, whatIs } = EstablishData;
   const [plan] = pricing;
   const name = "Shops & Establishments (Labour license)";
   return (
