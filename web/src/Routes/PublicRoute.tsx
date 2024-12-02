@@ -13,15 +13,12 @@ import ScrollToTop, { ScrollBox } from "../Components/Scroll/ScrollToTop";
 import License from "../Pages/LicenseCertificate/License";
 import Accounting from "../Pages/Accounting/Accounting";
 import ProjectReport from "../Pages/ProjectReport/ProjectReport";
-import PrivateRoute from "../Routes/PrivateRoute";
-import Dashboard from "../Pages/Dashboard/Dashboard";
 import Checkout from "../Pages/Checkout/Checkout";
 
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const PublicRoute = () => {
   const location = useLocation();
-
 
   return (
     <>
@@ -38,9 +35,6 @@ const PublicRoute = () => {
             <Route exact path="/license/*" component={License} />
             <Route exact path="/accounting" component={Accounting} />
             <Route exact path="/project-report" component={ProjectReport} />
-            <PrivateRoute exact path="/dashboard">
-              <Dashboard />
-            </PrivateRoute>
             <Route exact path="/checkout" component={Checkout} />
             <Route path="/*" render={() => <Redirect to="/page-not-found" />} />
           </Switch>
