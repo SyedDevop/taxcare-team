@@ -7,7 +7,7 @@ import {
   PricingCards,
 } from "@/Components/Pricing";
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
-import { TmData } from "./TmData";
+import { TmData } from "@data/TmData";
 
 const Tm = () => {
   const [{ registrationProcess, pricing, whatIs }] = TmData;

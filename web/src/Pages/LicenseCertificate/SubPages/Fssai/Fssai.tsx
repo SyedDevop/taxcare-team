@@ -8,7 +8,7 @@ import {
 } from "@/Components/Pricing";
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
 import OutBoundLink from "@/Components/OutBoundLink/OutBoundLink";
-import { FssaiData } from "./FssaiData";
+import { FssaiData } from "@data/FssaiData";
 
 const Fssai = () => {
   const [{ registrationProcess, pricing, whatIs }] = FssaiData;

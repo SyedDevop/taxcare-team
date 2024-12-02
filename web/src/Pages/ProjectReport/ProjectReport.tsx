@@ -6,7 +6,7 @@ import {
   PricingContainer,
 } from "@/Components/Pricing";
 // import { WhatIsSection } from "../../Components/WhatIs/WhatIs";
-import { ProjectReportData } from "./ProjectReportData";
+import { ProjectReportData } from "@data/ProjectReportData";
 
 const ProjectReport = () => {
   const [{ pricing, whatIs }] = ProjectReportData;

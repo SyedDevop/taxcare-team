@@ -7,7 +7,7 @@ import {
   PricingCards,
 } from "@/Components/Pricing";
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
-import { GstData } from "./GstData";
+import { GstData } from "@data/GstData";
 
 const Gst = () => {
   const [{ registrationProcess, pricing, whatIs }] = GstData;

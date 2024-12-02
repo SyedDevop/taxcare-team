@@ -6,7 +6,7 @@ import {
   PricingContainer,
 } from "../../Components/Pricing";
 // import { WhatIsSection } from "../../Components/WhatIs/WhatIs";
-import { AccountingData } from "./AccountingData";
+import { AccountingData } from "@data/AccountingData";
 
 const Accounting = () => {
   const [

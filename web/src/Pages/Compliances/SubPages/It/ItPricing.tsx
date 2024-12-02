@@ -7,7 +7,7 @@ import {
 } from "@/Components/Pricing";
 import { AddonData } from "@/Type";
 
-import { ItData } from "./ItData";
+import { ItData } from "@data/ItData";
 
 type Props = {
   pageTitle: string;

@@ -7,7 +7,7 @@ import {
   PricingContainer,
 } from "@/Components/Pricing";
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
-import { GstFilingData } from "./GstFilingData";
+import { GstFilingData } from "@data/GstFilingData";
 
 const GstFiling = () => {
   const [{ registrationProcess, pricing, whatIs }] = GstFilingData;

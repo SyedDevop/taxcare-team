@@ -20,6 +20,10 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        find: "@data",
+        replacement: resolve(__dirname, "../data/"),
+      },
+      {
         find: "@",
         replacement: resolve(__dirname, "src"),
       },

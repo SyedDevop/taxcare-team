@@ -11,7 +11,7 @@ import {
   IncrementAddonData,
 } from "@/Components/Pricing";
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
-import { EsicData } from "./EsicData";
+import { EsicData } from "@data/EsicData";
 
 const Esic = () => {
   const [{ registrationProcess, pricing, addOns, whatIs }] = EsicData;

@@ -1,6 +1,6 @@
 import BannerImg from "@/assets/img/banner1.webp";
 import { Banner, BannerContent } from "@/Components/Banner/Banner";
-import { OpcData } from "./OpcData";
+import { OpcData } from "@data/OpcData";
 import { ProcessSteps } from "@/Components/ProcessSteps/ProcessSteps";
 import {
   PricingSection,

@@ -7,7 +7,7 @@ import {
   PricingContainer,
 } from "@/Components/Pricing";
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
-import { EstablishData } from "./EstablishmentData";
+import { EstablishData } from "@data/EstablishmentData";
 import OutBoundLink from "@/Components/OutBoundLink/OutBoundLink";
 
 const Establishment = () => {

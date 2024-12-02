@@ -7,7 +7,7 @@ import {
   PricingContainer,
 } from "@/Components/Pricing";
 import { WhatIsSection } from "@/Components/WhatIs/WhatIs";
-import { RocData } from "./RocData";
+import { RocData } from "@data/RocData";
 
 const Roc = () => {
   const [{ registrationProcess, pricing, whatIs }] = RocData;
