@@ -1,5 +1,5 @@
 import ContactForm from "./ContactForm";
-import Procedure from "./Procedure";
+// import Procedure from "./Procedure";
 import "./Info.scss";
 
 const Info = () => {
@@ -7,7 +7,7 @@ const Info = () => {
     <section id="info">
       <div className="container infoGroup">
         <ContactForm />
-        <Procedure />
+        {/* <Procedure /> */}
       </div>
     </section>
   );
