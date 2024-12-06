@@ -1,7 +1,8 @@
 import { app, shell, BrowserWindow, ipcMain } from "electron";
 import { join } from "path";
 import { electronApp, optimizer, is } from "@electron-toolkit/utils";
-import icon from "../../resources/icon.png?asset";
+import icon from "../../resources/logo192.png?asset";
+import ficon from "../../resources/favicon.ico?asset";
 
 function createWindow(): void {
   // Create the browser window.
@@ -9,8 +10,7 @@ function createWindow(): void {
     width: 900,
     height: 670,
     show: false,
-    title: "Tax-care Team",
-    icon: join(__dirname, "../../../web/public/favicon.ico"),
+    icon: ficon,
     fullscreenable: true,
     autoHideMenuBar: true,
     ...(process.platform === "linux" ? { icon } : {}),
@@ -18,6 +18,7 @@ function createWindow(): void {
       preload: join(__dirname, "../preload/index.js"),
       sandbox: false,
     },
+    title: "Tax-care Team",
   });
 
   mainWindow.on("ready-to-show", () => {
