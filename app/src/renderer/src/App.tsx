@@ -1,35 +1,31 @@
-import Versions from './components/Versions'
-import electronLogo from './assets/electron.svg'
+import { PricingForm } from "@renderer/components/pricing-form";
+import { PerksManager } from "@renderer/components/perks-manager";
+import { ContactInfoTable } from "@renderer/components/contact-info-table";
 
 function App(): JSX.Element {
-  const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
-
   return (
-    <>
-      <img alt="logo" className="logo" src={electronLogo} />
-      <div className="creator">Powered by electron-vite</div>
-      <div className="text">
-        Build an Electron app with <span className="react">React</span>
-        &nbsp;and <span className="ts">TypeScript</span>
-      </div>
-      <p className="tip">
-        Please try pressing <code>F12</code> to open the devTool
-      </p>
-      <div className="actions">
-        <div className="action">
-          <a href="https://electron-vite.org/" target="_blank" rel="noreferrer">
-            Documentation
-          </a>
+    <div className="container mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
+      <div className="grid gap-6 md:grid-cols-2">
+        <div>
+          <h2 className="text-2xl font-semibold mb-4">
+            Update Pricing & Plans
+          </h2>
+          <PricingForm />
         </div>
-        <div className="action">
-          <a target="_blank" rel="noreferrer" onClick={ipcHandle}>
-            Send IPC
-          </a>
+        <div>
+          <h2 className="text-2xl font-semibold mb-4">Manage Perks</h2>
+          <PerksManager />
         </div>
       </div>
-      <Versions></Versions>
-    </>
-  )
+      <div className="mt-8">
+        <h2 className="text-2xl font-semibold mb-4">
+          User Contact Information
+        </h2>
+        <ContactInfoTable />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

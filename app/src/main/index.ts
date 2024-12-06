@@ -9,7 +9,6 @@ function createWindow(): void {
     width: 900,
     height: 670,
     show: false,
-    fullscreen: true,
     fullscreenable: true,
     autoHideMenuBar: true,
     ...(process.platform === "linux" ? { icon } : {}),
@@ -20,6 +19,7 @@ function createWindow(): void {
   });
 
   mainWindow.on("ready-to-show", () => {
+    mainWindow.maximize();
     mainWindow.show();
   });
 
