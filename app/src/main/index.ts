@@ -9,6 +9,8 @@ function createWindow(): void {
     width: 900,
     height: 670,
     show: false,
+    title: "Tax-care Team",
+    icon: join(__dirname, "../../../web/public/favicon.ico"),
     fullscreenable: true,
     autoHideMenuBar: true,
     ...(process.platform === "linux" ? { icon } : {}),
