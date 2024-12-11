@@ -1,3 +1,5 @@
+import "@/components";
+
 function App(): JSX.Element {
   return (
     <div className="hidden flex-col md:flex">
