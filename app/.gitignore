@@ -22,3 +22,9 @@ bower_components
 psd
 thumb
 sketch
+#--------------------------------------------------#
+# The following was generated with gitignore.nvim: #
+#--------------------------------------------------#
+# Gitignore for the following technologies: dotenv
+
+.env

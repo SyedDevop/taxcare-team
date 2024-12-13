@@ -22,7 +22,7 @@ function createWindow(): void {
 
   mainWindow.on("ready-to-show", () => {
     mainWindow.maximize();
-    mainWindow.show();
+    mainWindow.showInactive();
   });
 
   mainWindow.webContents.setWindowOpenHandler((details) => {

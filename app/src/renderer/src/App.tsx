@@ -1,12 +1,16 @@
-import "@/components";
+import { Route, Routes } from "react-router";
+import PrivateRoute from "./routes/PrivateRoute";
+import Login from "./pages/login";
+import Dashboard from "./pages/main";
 
 function App(): JSX.Element {
   return (
-    <div className="hidden flex-col md:flex">
-      <div className="border-b">
-        <div className="flex h-16 items-center px-4"></div>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route element={<PrivateRoute />}>
+        <Route path="/" element={<Dashboard />} />
+      </Route>
+    </Routes>
   );
 }
 
