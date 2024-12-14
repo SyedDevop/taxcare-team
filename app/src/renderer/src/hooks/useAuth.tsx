@@ -11,6 +11,9 @@ import {
   User,
   updatePassword,
   UserCredential,
+  onAuthStateChanged,
+  setPersistence,
+  browserLocalPersistence,
 } from "firebase/auth";
 
 export const app = initializeApp({
@@ -48,6 +51,13 @@ export const AuthProvider: FC<{ children: React.ReactNode }> = ({
   const [user, setUser] = useState<User | null>(null);
   const [isAuthenticating, setIsAuthenticating] = useState<boolean>(true);
   const auth = getAuth(app);
+  setPersistence(auth, browserLocalPersistence)
+    .then(() => {
+      console.log("Persistence set to browserLocalPersistence");
+    })
+    .catch((error) => {
+      console.error("Error setting persistence:", error);
+    });
 
   /**
    * @type {Function} - Create a new user with email and password.
@@ -72,13 +82,13 @@ export const AuthProvider: FC<{ children: React.ReactNode }> = ({
     email: string,
     password: string,
   ): Promise<boolean> => {
+    setPersistence(auth, browserLocalPersistence);
     const userCredential = await signInWithEmailAndPassword(
       auth,
       email,
       password,
     );
     setUser(userCredential.user);
-    console.log(userCredential.user);
     return true;
   };
 
@@ -115,13 +125,14 @@ export const AuthProvider: FC<{ children: React.ReactNode }> = ({
   // ... component that utilizes this hook to re-render with the ...
   // ... latest auth object.
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+    setIsAuthenticating(true);
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setIsAuthenticating(false);
     });
     // Cleanup subscription on unmount
-    return unsubscribe();
-  }, [auth]);
+    return unsubscribe;
+  }, []);
 
   const values = {
     user,
