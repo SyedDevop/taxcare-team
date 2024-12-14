@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import PrivateRoute from "./routes/PrivateRoute";
-import Login from "./pages/login";
+import Login from "./pages/login/login";
 import Dashboard from "./pages/main";
 
 function App(): JSX.Element {

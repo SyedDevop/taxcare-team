@@ -4,10 +4,10 @@ import { useNavigate, Outlet } from "react-router";
 import { useAuth } from "@/hooks/useAuth";
 
 const PrivateRoute = () => {
-  const { isAuthenticating } = useAuth();
+  const { user } = useAuth();
   let navigate = useNavigate();
   useEffect(() => {
-    if (isAuthenticating) {
+    if (!user) {
       navigate("/login");
     }
   }, []);

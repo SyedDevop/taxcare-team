@@ -78,6 +78,7 @@ export const AuthProvider: FC<{ children: React.ReactNode }> = ({
       password,
     );
     setUser(userCredential.user);
+    console.log(userCredential.user);
     return true;
   };
 
