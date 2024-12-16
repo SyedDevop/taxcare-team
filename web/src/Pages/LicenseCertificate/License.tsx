@@ -3,6 +3,7 @@ import Establishment from "./SubPages/Establishment/Establishment";
 import Fssai from "./SubPages/Fssai/Fssai";
 import ImportExport from "./SubPages/ImportExport/ImportExport";
 import Msme from "./SubPages/Msme/Msme";
+import Dsc from "./SubPages/Dsc/Dsc";
 
 const License = () => {
   return (
@@ -20,6 +21,7 @@ const License = () => {
           component={Establishment}
         />
         <Route exact path="/license/msme-certificate" component={Msme} />
+        <Route exact path="/license/dsc" component={Dsc} />
       </Switch>
     </section>
   );

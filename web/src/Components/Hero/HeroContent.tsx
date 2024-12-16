@@ -1,5 +1,6 @@
 import { FC } from "react";
-import Typewriter from "typewriter-effect";
+import { ReactTyped } from "react-typed";
+
 interface Props {
   callBackFunction: () => void;
   state?: boolean;
@@ -16,17 +17,13 @@ const HeroContent: FC<Props> = (props) => {
     <div className="content">
       <h1>{props.headerText}</h1>
       {props.state && (
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter.callFunction(() => {
-              props.callBackFunction();
-            });
-          }}
-          options={{
-            strings: props.animateTextList,
-            autoStart: true,
-            loop: false,
-          }}
+        <ReactTyped
+          strings={props.animateTextList}
+          typeSpeed={80}
+          backSpeed={70}
+          startDelay={100}
+          onComplete={() => props.callBackFunction()}
+          className="typewriter"
         />
       )}
       {props.markTag && <h3>{props.markTag}</h3>}

@@ -1,3 +1,5 @@
+export const basePrice = 499;
+export const GSTstartAt = `Only At Rs ${basePrice}/-`;
 export const GstData = {
   registrationProcess: [
     {
@@ -25,7 +27,7 @@ export const GstData = {
       plan: [
         {
           planId: "individual",
-          price: 499,
+          price: basePrice,
         },
         {
           planId: "others",

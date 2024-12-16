@@ -1,3 +1,5 @@
+export const basePrice = 9999;
+export const PLCstartAt = `Pvt Ltd at Rs ${basePrice}/-`;
 export const PlcData = {
   registrationProcess: [
     {
@@ -24,7 +26,7 @@ export const PlcData = {
       plan: [
         {
           planId: "basic",
-          price: 9999,
+          price: basePrice,
           perPlanPerks: [
             "DIN & DSC of 2 Directors",
             "Authorised Share capital",

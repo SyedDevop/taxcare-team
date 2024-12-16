@@ -1,3 +1,6 @@
+export const basePrice = 8499;
+export const LLPstartAt = `LLP at Rs ${basePrice}/-`;
+
 export const LlpData = {
   registrationProcess: [
     {
@@ -24,7 +27,7 @@ export const LlpData = {
       plan: [
         {
           planId: "basic",
-          price: 8499,
+          price: basePrice,
           perPlanPerks: [
             "DSC of 2 Partners",
             "Authorised Share capital",

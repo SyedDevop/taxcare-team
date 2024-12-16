@@ -50,6 +50,7 @@ export const NavLinkData = [
         title: "SHOPS AND ESTABLISHMENT",
         path: "/license/shop-establishment",
       },
+      { title: "Digital Signature", path: "/license/dsc" },
     ],
   },
   {

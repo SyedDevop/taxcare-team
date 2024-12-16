@@ -7,6 +7,11 @@ import background from "../../assets/img/banner.webp";
 import HeroContent from "./HeroContent";
 import TagLine from "../TagLine/TagLine";
 
+import { GSTstartAt } from "@data/GstData";
+import { OPCstartAt } from "@data/OpcData";
+import { LLPstartAt } from "@data/LlpData";
+import { PLCstartAt } from "@data/PlcData";
+
 const Hero = () => {
   const [displayState, setDisplayState] = useState<boolean>(true);
   const updateUi = () => {
@@ -30,10 +35,13 @@ const Hero = () => {
                     <HeroContent
                       callBackFunction={updateUi}
                       state={displayState}
-                      animateTextList={["Only At Rs 499/-"]}
+                      animateTextList={[
+                        "Special Offer 25% off on 2000/-",
+                        GSTstartAt,
+                        "",
+                      ]}
                       headerText="Get GST Registration Now"
                       buttonText="Enquire"
-                      markTag="With One Month filing Free."
                       tagLine="Get all your Compliances done at one place."
                     />
                   </div>
@@ -42,12 +50,8 @@ const Hero = () => {
                     <HeroContent
                       callBackFunction={updateUi}
                       state={!displayState}
-                      animateTextList={[
-                        "Pvt Ltd at Rs 5999/-",
-                        "LLP at Rs 4499/-",
-                        "OPC at Rs 5499/-",
-                      ]}
-                      headerText="Register Your Business In"
+                      animateTextList={[PLCstartAt, LLPstartAt, OPCstartAt, ""]}
+                      headerText="Register Your Business in India"
                       buttonText="Enquire"
                       tagLine="Get all your Compliances done at one place."
                     />

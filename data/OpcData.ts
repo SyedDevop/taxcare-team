@@ -1,3 +1,5 @@
+export const basePrice = 8499;
+export const OPCstartAt = `OPC at Rs ${basePrice}/-`;
 export const OpcData = {
   registrationProcess: [
     {
@@ -24,7 +26,7 @@ export const OpcData = {
       plan: [
         {
           planId: "basic",
-          price: 8499,
+          price: basePrice,
           perPlanPerks: [
             "DIN & DSC of 1 Directors",
             "Authorised Share capital",
