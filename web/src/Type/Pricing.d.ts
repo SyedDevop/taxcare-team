@@ -31,6 +31,7 @@ export interface PlanData {
   price: number;
   subTitle?: string;
   perPlanPerks?: string[];
+  off?: number[2];
 }
 
 export interface PricingData {

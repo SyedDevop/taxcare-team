@@ -17,7 +17,7 @@ const PriceCard = ({
   repeatedPerks,
   addons,
 }: PriceCardProp) => {
-  const { planId, price, subTitle, perPlanPerks } = planData;
+  const { planId, price, subTitle, perPlanPerks, off } = planData;
   // const history = useHistory();
   // const [, setOrders] = useLocalStorage("orderData");
   const perks = repeatedPerks || perPlanPerks;
@@ -37,6 +37,12 @@ const PriceCard = ({
   // };
   return (
     <div className="pricing-card">
+      {off && (
+        <span className="pricing-off">
+          {off[0]}% Off
+          <span className="pricing-off__strick"> Rs {off[1]}/-</span>
+        </span>
+      )}
       <h3>{planId}</h3>
       <hr />
       <h4>{title}</h4>
