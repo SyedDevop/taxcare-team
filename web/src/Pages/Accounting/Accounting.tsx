@@ -1,17 +1,17 @@
 import BannerImg from "../../assets/img/banner1.webp";
 import { Banner, BannerContent } from "@/Components/Banner/Banner";
-import {
-  PricingSection,
-  PricingCards,
-  PricingContainer,
-} from "../../Components/Pricing";
-// import { WhatIsSection } from "../../Components/WhatIs/WhatIs";
-import { AccountingData } from "@data/AccountingData";
+// import {
+//   PricingSection,
+//   PricingCards,
+//   PricingContainer,
+// } from "../../Components/Pricing";
+// // import { WhatIsSection } from "../../Components/WhatIs/WhatIs";
+// import { AccountingData } from "@data/AccountingData";
 
 const Accounting = () => {
-  const {
-    pricing: [plan1, plan2],
-  } = AccountingData;
+  // const {
+  //   pricing: [plan1, plan2],
+  // } = AccountingData;
   const pageTitle = "Accounting and Book keeping";
   return (
     <main id="accounting">
@@ -21,20 +21,20 @@ const Accounting = () => {
           tagLine1="Get your accounting done"
           price="Starting @ just Rs 2499/-"
           tagLine2=""
-          paragraph="Select a plan as per your requirements."
+          paragraph=""
         />
       </Banner>
-      <PricingSection companyType={pageTitle}>
-        <PricingContainer containerTitle="Accounting Plan for (Pvt Ltd Co. & LLP)">
-          <PricingCards planType="A/c (Pvt Ltd Co. & LLP)" planData={plan1} />
-        </PricingContainer>
-        <PricingContainer containerTitle="Accounting Plan for (Individual & Partnership)">
-          <PricingCards
-            planType="A/c (Individual & Partnership)"
-            planData={plan2}
-          />
-        </PricingContainer>
-      </PricingSection>
+      {/* <PricingSection companyType={pageTitle}> */}
+      {/*   <PricingContainer containerTitle="Accounting Plan for (Pvt Ltd Co. & LLP)"> */}
+      {/*     <PricingCards planType="A/c (Pvt Ltd Co. & LLP)" planData={plan1} /> */}
+      {/*   </PricingContainer> */}
+      {/*   <PricingContainer containerTitle="Accounting Plan for (Individual & Partnership)"> */}
+      {/*     <PricingCards */}
+      {/*       planType="A/c (Individual & Partnership)" */}
+      {/*       planData={plan2} */}
+      {/*     /> */}
+      {/*   </PricingContainer> */}
+      {/* </PricingSection> */}
       {/* <WhatIsSection whatIsData={whatIs} /> */}
     </main>
   );

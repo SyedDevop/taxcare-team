@@ -29,7 +29,6 @@ export const LlpData = {
           planId: "basic",
           price: basePrice,
           perPlanPerks: [
-            "DSC of 2 Partners",
             "Authorised Share capital",
             "(upto RS 1,00,000/-)",
             "Din of All Designated Partners",
@@ -37,14 +36,12 @@ export const LlpData = {
             "MOA & AOA",
             "PAN & TAN Card ",
             "Incorporation Certificate",
-            "Includes Govt Fee ",
           ],
         },
         {
           planId: "pro",
           price: 12999,
           perPlanPerks: [
-            "DSC of 2 Partners",
             "Authorised Share capital",
             "(upto RS 1,00,000/-)",
             "Din of All Designated Partners",
@@ -57,7 +54,6 @@ export const LlpData = {
             "Board Resolution 1 year",
             "ROC Compliances 1 year ",
             "Income Tax filing 1 year",
-            "Includes Govt Fee ",
           ],
         },
       ],
