@@ -47,10 +47,15 @@ const PriceCard = ({
       <hr />
       <h4>{title}</h4>
       <h4>{subTitle}</h4>
-
-      <strong>
-        Rs {price + addonPrice()}/- {paymentInterval && paymentInterval}
-      </strong>
+      {price != 0 ? (
+        <strong>
+          Rs {price + addonPrice()}/- {paymentInterval && paymentInterval}
+        </strong>
+      ) : (
+        <strong>
+          <h4>Contact for more details</h4>
+        </strong>
+      )}
 
       <ul>
         {perks?.map((perk, key) => {

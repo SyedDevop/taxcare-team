@@ -37,7 +37,7 @@ export const FssaiData = {
         {
           planId: "Central License",
           subTitle: "Above 20 Cr",
-          price: "asd",
+          price: 0,
         },
       ],
     },
