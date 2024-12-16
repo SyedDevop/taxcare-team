@@ -1,4 +1,12 @@
-import { Calendar, Home, Inbox, Search, Settings, Palette } from "lucide-react";
+import {
+  Calendar,
+  Home,
+  Inbox,
+  Search,
+  Settings,
+  Palette,
+  LogOut,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -13,6 +21,7 @@ import {
   SidebarRail,
 } from "./ui/sidebar";
 import { ModeToggle } from "./mode-toggle";
+import { useAuth } from "@/hooks/useAuth";
 
 // Menu items.
 const items = [
@@ -49,6 +58,7 @@ const items = [
 ];
 
 export function AppSidebar() {
+  const logOut = useAuth().signOutUser;
   return (
     <Sidebar collapsible="icon">
       <SidebarContent>
@@ -69,6 +79,13 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton onClick={logOut}>
+              <LogOut /> <span>Log out</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarContent>
       <SidebarFooter>
         <SidebarMenu>

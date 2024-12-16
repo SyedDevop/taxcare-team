@@ -10,6 +10,7 @@ function App(): JSX.Element {
       <Route element={<PrivateRoute />}>
         <Route path="/" element={<Dashboard />} />
       </Route>
+      <Route path="*" element={<div>Page not found</div>} />
     </Routes>
   );
 }
