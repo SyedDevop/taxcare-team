@@ -30,6 +30,7 @@ export const EstablishData = {
       ],
     },
   ],
+
   whatIs: [
     {
       title: "GST Registration ?",
@@ -37,3 +38,4 @@ export const EstablishData = {
     },
   ],
 };
+// TODO : change this to shop and establish.

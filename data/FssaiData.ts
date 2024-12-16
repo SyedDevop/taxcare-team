@@ -27,17 +27,17 @@ export const FssaiData = {
         {
           planId: "Basic License",
           subTitle: "12 Lacs",
-          price: 1399,
+          price: 2500,
         },
         {
           planId: "State License",
           subTitle: "12 Lacs - 20 Cr",
-          price: 2399,
+          price: 8000,
         },
         {
           planId: "Central License",
           subTitle: "Above 20 Cr",
-          price: 3399,
+          price: "asd",
         },
       ],
     },

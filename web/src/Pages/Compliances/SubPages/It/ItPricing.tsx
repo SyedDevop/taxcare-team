@@ -14,12 +14,12 @@ type Props = {
 };
 
 const ItPricing = ({ pageTitle }: Props) => {
-  const [
-    {
-      pricing: [plan1, plan2],
-      addOns,
-    },
-  ] = ItData;
+  //  {
+  //    pricing: [plan1, plan2],
+  //    addOns,
+  //  }
+  // = ItData;
+  const { addOns, pricing } = ItData;
   const [addonData, setAddonData] = useState<AddonData[]>([]);
   const handleAddon = ({
     addOnPlanId: planId,
@@ -51,14 +51,14 @@ const ItPricing = ({ pageTitle }: Props) => {
       <PricingContainer containerTitle="(ITR) Plans for Business Associates">
         <PricingCards
           planType="(ITR) for Business"
-          planData={plan1}
+          planData={pricing[0]}
           addons={addonData}
         />
       </PricingContainer>
       <PricingContainer containerTitle="(ITR) Plans for Salaried Employees">
         <PricingCards
           planType="(ITR) for Employees"
-          planData={plan2}
+          planData={pricing[1]}
           addons={addonData}
         />
       </PricingContainer>
