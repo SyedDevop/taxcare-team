@@ -64,14 +64,14 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 40% 10%; /* Rich dark navy for a solid, deep background */
+    --sidebar-foreground: 210 35% 95%; /* Softer white for better readability */
+    --sidebar-primary: 224 76% 55%; /* Brighter, vibrant blue for a fresh primary element */
+    --sidebar-primary-foreground: 222.2 47.4% 12%; /* Maintains strong contrast */
+    --sidebar-accent: 220 70% 50%; /* From --chart-1 for a more vivid accent */
+    --sidebar-accent-foreground: 210 40% 98%; /* Matches other accents for consistency */
+    --sidebar-border: 220 35% 16%; /* A slightly lighter shade of the background for soft borders */
+    --sidebar-ring: 224 76% 48%; /* Retains focus color to tie with the rest of the design */
   }
 }
 
