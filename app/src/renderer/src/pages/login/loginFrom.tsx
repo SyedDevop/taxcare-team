@@ -21,8 +21,10 @@ import {
 } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocalStorage } from "@/hooks/use-storage";
 import { FirebaseError } from "firebase/app";
 import { useNavigate } from "react-router";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const formSchema = z.object({
   email: z
@@ -32,17 +34,24 @@ const formSchema = z.object({
   pass: z
     .string()
     .min(6, { message: "Password needs to be more the 6 character" }),
+  saveEmail: z.boolean().default(true).optional(),
 });
 
 export default function LoginForm() {
+  const [stEmail, setLocalEmail] = useLocalStorage<string>("email");
   const { toast } = useToast();
   const { signInUser } = useAuth();
   const nave = useNavigate();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: stEmail,
+      saveEmail: true,
+    },
   });
-
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLocalEmail(values.saveEmail ? values.email : "");
     try {
       if (await signInUser(values.email, values.pass)) {
         nave("/");
@@ -105,9 +114,28 @@ export default function LoginForm() {
                 </FormItem>
               )}
             />
+
+            <FormField
+              control={form.control}
+              name="saveEmail"
+              render={({ field }) => (
+                <FormItem className="pt-4">
+                  <FormControl className="mr-5">
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <FormLabel>Save email</FormLabel>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           </CardContent>
           <CardFooter>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" className="w-full">
+              Login
+            </Button>
           </CardFooter>
         </form>
       </Form>
