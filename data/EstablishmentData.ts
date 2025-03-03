@@ -33,8 +33,13 @@ export const EstablishData = {
 
   whatIs: [
     {
-      title: "GST Registration ?",
-      mainParagraph: `In the GST Regime, businesses whose turnover exceeds Rs. 40 lakhs* (Rs 10 lakhs for NE and hill states) is required to register as a normal taxable person. This process of registration is called GST registration. For certain businesses, registration under GST is mandatory. If the organization carries on business without registering under GST, it will be an offence under GST and heavy penalties will apply.`,
+      title: "Shop Establishment ?",
+      mainParagraph:
+        "The Shop and Establishment Act regulates the shops and commercial establishments operating within the state. Every state has its own Shop and Establishment Act (“Act”). However, the general provisions of the Act are the same in all states. The Labour Department of the respective states implements the Shop and Establishment Act.",
+      sebParagraph: [
+        "Shops are generally defined under the Act as the premises where the selling of goods take place either by retail or wholesale or where services are rendered to customers. It includes offices, godowns, storerooms and warehouses used in connection with the trade or business.",
+        "Commercial establishments are generally defined as a commercial, banking, trading or insurance establishment or administrative service in which persons are employed for office work. It includes a hotel, boarding or eating house, restaurant, cafe, theatre, or other public entertainment or amusement places. However, factories and industries are not covered by the Act and are regulated by the Factories Act, 1948 and Industries (Development and Regulation) Act 1951.",
+      ],
     },
   ],
 };

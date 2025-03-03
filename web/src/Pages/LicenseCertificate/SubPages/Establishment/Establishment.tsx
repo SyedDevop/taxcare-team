@@ -44,51 +44,102 @@ const Establishment = () => {
 
 const EstablishmentFeeStructure = () => {
   return (
-    <table>
-      <tr>
-        <th>Registration Fee</th>
-      </tr>
-      <tr>
-        <th>No. of Employees</th>
-        <th>Fee(Rs.)</th>
-      </tr>
-      <tr>
-        <td>No Employees</td>
-        <td>300/-</td>
-      </tr>
-      <tr>
-        <td>1 to 9 Employees</td>
-        <td>600/-</td>
-      </tr>
-      <tr>
-        <td>10 to 19 Employees</td>
-        <td>4000/-</td>
-      </tr>
-      <tr>
-        <td>20 to 49 Employees</td>
-        <td>10000/-</td>
-      </tr>
-      <tr>
-        <td>50 to 99 Employees</td>
-        <td>20000/-</td>
-      </tr>
-      <tr>
-        <td>100 to 250 Employees</td>
-        <td>40000/-</td>
-      </tr>
-      <tr>
-        <td>251 to 500 Employees</td>
-        <td>50000/-</td>
-      </tr>
-      <tr>
-        <td>501 to 1000 Employees</td>
-        <td>70000/-</td>
-      </tr>
-      <tr>
-        <td>Above 1000 Employees</td>
-        <td>75000/-</td>
-      </tr>
-    </table>
+    <>
+      <h3
+        style={{
+          textAlign: "center",
+          marginBottom: "1rem",
+          color: "#fff",
+          letterSpacing: "1px",
+        }}
+      >
+        Registration Fee
+      </h3>
+      <table
+        style={{
+          width: "100%",
+          borderCollapse: "separate",
+          borderSpacing: "0",
+          background: "rgba(255, 255, 255, 0.1)",
+          color: "#fff",
+          minWidth: "600px",
+          borderRadius: "8px",
+          overflow: "hidden",
+          boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+        }}
+      >
+        <thead>
+          <tr style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}>
+            <th
+              style={{
+                padding: "16px",
+                borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
+                textAlign: "left",
+                fontWeight: "bold",
+                fontSize: "16px",
+              }}
+            >
+              No. of Employees
+            </th>
+            <th
+              style={{
+                padding: "16px",
+                borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
+                textAlign: "left",
+                fontWeight: "bold",
+                fontSize: "16px",
+              }}
+            >
+              Fee (Rs.)
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ["No Employees", "405/-"],
+            ["1 to 9 Employees", "810/-"],
+            ["10 to 19 Employees", "5,400/-"],
+            ["20 to 49 Employees", "13,500/-"],
+            ["50 to 99 Employees", "27,000/-"],
+            ["100 to 250 Employees", "54,000/-"],
+            ["251 to 500 Employees", "67,500/-"],
+            ["501 to 1000 Employees", "94,500/-"],
+            ["Above 1000 Employees", "1,01,250/-"],
+          ].map(([employees, fee], index) => (
+            <tr
+              key={index}
+              style={{
+                backgroundColor:
+                  index % 2 === 0
+                    ? "rgba(255, 255, 255, 0.15)"
+                    : "rgba(255, 255, 255, 0.1)",
+                transition: "background-color 0.3s ease",
+                cursor: "pointer",
+              }}
+            >
+              <td
+                style={{
+                  padding: "16px",
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                  fontSize: "14px",
+                }}
+              >
+                {employees}
+              </td>
+              <td
+                style={{
+                  padding: "16px",
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                  fontSize: "14px",
+                }}
+              >
+                {fee}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
   );
 };
 

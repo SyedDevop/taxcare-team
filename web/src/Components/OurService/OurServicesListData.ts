@@ -38,7 +38,7 @@ const OurServiceList: object[] = [
       {
         llp: [
           { title: "Limited Liability Partnership" },
-          { price: "Starting at INR 5499/-." },
+          { price: "Starting at INR 8499/-." },
           {
             description: `LLP is a combination of partnership firm ans linked company so llp provides the benefits os both entity's.`,
           },
@@ -48,7 +48,7 @@ const OurServiceList: object[] = [
       {
         opc: [
           { title: "One Person Company" },
-          { price: "Starting at INR 5499/-" },
+          { price: "Starting at INR 8499/-" },
           {
             description: `Only structure for a proprietor to take advantage of limited liability and get recognition of a company. With this a promoter can also have full authority over entire business.`,
           },
@@ -58,7 +58,7 @@ const OurServiceList: object[] = [
       {
         plc: [
           { title: "Private Limited Company" },
-          { price: "Starting at INR 5999/-" },
+          { price: "Starting at INR 9999/-" },
           {
             description: `Private Limited Company is the default choice of all the startups as they can raise equity funds from investors. Besides, all the directors and shareholders have limited liability.`,
           },
@@ -126,7 +126,7 @@ const OurServiceList: object[] = [
       {
         fssai: [
           { title: "FSSAI Food License." },
-          { price: "Starting at INR 1399/-." },
+          { price: "Starting at INR 2500/-." },
           {
             description: `Click to apply for FSSAI license for your Business.`,
           },
@@ -161,6 +161,16 @@ const OurServiceList: object[] = [
             description: `Every shop owner or owner of commercial establishment shall make an application to register there establishment within 30days os start of the business. Click to apply fro new license.`,
           },
           { viewLink: "/license/shop-establishment" },
+        ],
+      },
+      {
+        dsc: [
+          { title: "Digital Signature Certificate" },
+          { price: "Starting at INR 2000/-." },
+          {
+            description: `A Digital Signature Certificate (DSC) is an electronic signature that verifies the identity of the person who created it. You can use a DSC to sign documents, authenticate your signature, and validate signed copies`,
+          },
+          { viewLink: "/license/dsc" },
         ],
       },
     ],

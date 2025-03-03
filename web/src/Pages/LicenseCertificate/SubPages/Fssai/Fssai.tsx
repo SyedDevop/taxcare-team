@@ -19,7 +19,7 @@ const Fssai = () => {
         <BannerContent
           title={name}
           tagLine1="Register your business with"
-          price="Starting @ just Rs 1399/-"
+          price="Starting @ just Rs 2500/-"
           tagLine2="Registration in India"
         />
       </Banner>
