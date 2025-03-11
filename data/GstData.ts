@@ -28,7 +28,6 @@ export const GstData = {
         {
           planId: "individual",
           price: basePrice,
-          off: [25, 2000],
         },
         {
           planId: "others",

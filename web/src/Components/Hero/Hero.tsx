@@ -35,11 +35,7 @@ const Hero = () => {
                     <HeroContent
                       callBackFunction={updateUi}
                       state={displayState}
-                      animateTextList={[
-                        "Special Offer 25% off on 2000/-",
-                        GSTstartAt,
-                        "",
-                      ]}
+                      animateTextList={[GSTstartAt, ""]}
                       headerText="Get GST Registration Now"
                       buttonText="Enquire"
                       tagLine="Get all your Compliances done at one place."
